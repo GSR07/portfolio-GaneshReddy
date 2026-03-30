@@ -29,11 +29,9 @@ navLinks.querySelectorAll('a').forEach(a => {
 
 /* ── Typed.js–style hero tagline ─────────────────── */
 const phrases = [
-  'Medical Image Analysis',
-  'Deep Learning Engineer',
-  'Computer Vision Researcher',
-  'Robotics & Autonomy',
-  'Embedded Systems Developer',
+  'Robotics Engineer',
+  'Computer Vision Engineer',
+  'Embedded Systems Engineer',
 ];
 let phraseIdx = 0;
 let charIdx   = 0;

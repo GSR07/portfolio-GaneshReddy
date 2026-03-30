@@ -12,7 +12,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=16" />
+  <link rel="stylesheet" href="style.css?v=19" />
 </head>
 
 <body>
@@ -43,6 +43,11 @@
           <div class="dr-prop p2"></div>
           <div class="dr-prop p3"></div>
           <div class="dr-prop p4"></div>
+          <div class="dr-scanner">
+            <div class="dr-scan-beam"></div>
+            <div class="dr-scan-line"></div>
+            <div class="dr-scan-dot"></div>
+          </div>
         </div>
         <div class="swarm-drone d2">
           <div class="dr-body"></div>
@@ -50,6 +55,11 @@
           <div class="dr-prop p2"></div>
           <div class="dr-prop p3"></div>
           <div class="dr-prop p4"></div>
+          <div class="dr-scanner">
+            <div class="dr-scan-beam" style="animation-delay:0.4s"></div>
+            <div class="dr-scan-line" style="animation-delay:0.4s"></div>
+            <div class="dr-scan-dot" style="animation-delay:0.4s"></div>
+          </div>
         </div>
         <div class="swarm-drone d3">
           <div class="dr-body"></div>
@@ -57,6 +67,11 @@
           <div class="dr-prop p2"></div>
           <div class="dr-prop p3"></div>
           <div class="dr-prop p4"></div>
+          <div class="dr-scanner">
+            <div class="dr-scan-beam" style="animation-delay:0.8s"></div>
+            <div class="dr-scan-line" style="animation-delay:0.8s"></div>
+            <div class="dr-scan-dot" style="animation-delay:0.8s"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -76,7 +91,7 @@
           id="download-cv-btn">Download CV</a>
       </div>
       <div class="hero-socials">
-        <a href="mailto:ganeshreddy30102000@gmail.com" aria-label="Email" id="email-link">
+        <a href="mailto:ganeshsreddy1@gmail.com" aria-label="Email" id="email-link">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <rect x="2" y="4" width="20" height="16" rx="2" />
             <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
@@ -98,7 +113,7 @@
     </div>
     <div class="hero-photo-wrap">
       <div class="photo-ring"></div>
-      <img src="ganesh_photo.jpg" alt="Ganesh Reddy" class="hero-photo" id="profile-photo" />
+      <img src="photo.jpeg" alt="Ganesh Reddy" class="hero-photo" id="profile-photo" />
     </div>
     <a href="#about" class="scroll-down" aria-label="Scroll down">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -119,7 +134,7 @@
                 <div class="omni-link2">
                   <div class="omni-wrist">
                     <div class="omni-gripper"></div>
-                    <div class="pnp-cube"></div>
+                    <div class="pnp-cube"><span class="pnp-q-char">?</span></div>
                   </div>
                 </div>
               </div>
@@ -128,7 +143,7 @@
         </div>
       </div>
       <div class="section-label">01 / About</div>
-      <h2 class="section-title">Who I Am</h2>
+      <h2 class="section-title">Who I Am<span class="arm-q-target" aria-hidden="true">?</span></h2>
       <div class="about-grid">
         <div class="about-text">
           <p>I'm a <strong>Master's student in Autonomy Technologies</strong> at Friedrich-Alexander-Universität (FAU),
@@ -160,28 +175,58 @@
           <div class="card-chip">Research Focus</div>
           <ul class="focus-list">
             <li>
-              <span class="focus-icon">🤖</span>
+              <span class="focus-icon">
+                <svg class="icon-svg icon-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.5">
+                  <rect x="5" y="8" width="14" height="12" rx="2" />
+                  <circle cx="9.5" cy="13.5" r="1.5" fill="currentColor" />
+                  <circle cx="14.5" cy="13.5" r="1.5" fill="currentColor" />
+                  <path d="M9 17.5h6M12 8V5M10 5h4" />
+                  <path d="M3 10.5v3M21 10.5v3" />
+                </svg>
+              </span>
               <div>
                 <strong>Robotics &amp; Manipulation</strong>
                 <p>ROS2, MoveIt2, Franka Panda, Nav2, Gazebo/Ignition simulation</p>
               </div>
             </li>
             <li>
-              <span class="focus-icon">👁</span>
+              <span class="focus-icon">
+                <svg class="icon-svg icon-bob" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z" />
+                  <circle cx="12" cy="12" r="3" />
+                  <circle cx="12" cy="12" r="1" fill="currentColor" />
+                </svg>
+              </span>
               <div>
                 <strong>Computer Vision</strong>
                 <p>OpenCV, YOLO, HSV segmentation, TF2 transforms, object detection</p>
               </div>
             </li>
             <li>
-              <span class="focus-icon">🧠</span>
+              <span class="focus-icon">
+                <svg class="icon-svg icon-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.5">
+                  <path
+                    d="M12 5c-3.9 0-7 3.1-7 7 0 2.2 1 4.2 2.6 5.5L8 20h8l.4-2.5C18 16.2 19 14.2 19 12c0-3.9-3.1-7-7-7z" />
+                  <path d="M9 11h6M10 14h4M12 5V3" />
+                </svg>
+              </span>
               <div>
                 <strong>Medical Image Computing</strong>
                 <p>Chest X-ray analysis, disease classification, domain adaptation</p>
               </div>
             </li>
             <li>
-              <span class="focus-icon">📡</span>
+              <span class="focus-icon">
+                <svg class="icon-svg icon-ping" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.5">
+                  <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+                  <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+                  <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+                  <circle cx="12" cy="20" r="1" fill="currentColor" />
+                </svg>
+              </span>
               <div>
                 <strong>Embedded &amp; IoT</strong>
                 <p>ESP32, BLE, custom PCBs, firmware, sensor fusion</p>
@@ -215,7 +260,15 @@
 
         <!-- 1. Robotics — PRIMARY -->
         <div class="skill-group glass-card skill-primary">
-          <div class="skill-group-icon">🤖</div>
+          <div class="skill-group-icon">
+            <svg class="icon-svg icon-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="5" y="8" width="14" height="12" rx="2" />
+              <circle cx="9.5" cy="13.5" r="1.5" fill="currentColor" />
+              <circle cx="14.5" cy="13.5" r="1.5" fill="currentColor" />
+              <path d="M9 17.5h6M12 8V5M10 5h4" />
+              <path d="M3 10.5v3M21 10.5v3" />
+            </svg>
+          </div>
           <h3>Robotics &amp; Manipulation</h3>
           <div class="skill-tags">
             <span class="tag tag-hot">ROS2</span>
@@ -231,7 +284,13 @@
 
         <!-- 2. Computer Vision — SECONDARY -->
         <div class="skill-group glass-card skill-secondary">
-          <div class="skill-group-icon">👁</div>
+          <div class="skill-group-icon">
+            <svg class="icon-svg icon-bob" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z" />
+              <circle cx="12" cy="12" r="3" />
+              <circle cx="12" cy="12" r="1" fill="currentColor" />
+            </svg>
+          </div>
           <h3>Computer Vision</h3>
           <div class="skill-tags">
             <span class="tag tag-hot">OpenCV</span>
@@ -245,7 +304,13 @@
 
         <!-- 3. Programming -->
         <div class="skill-group glass-card">
-          <div class="skill-group-icon">💻</div>
+          <div class="skill-group-icon">
+            <svg class="icon-svg icon-bob" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="4" width="20" height="14" rx="2" />
+              <path d="M8 14l-3-2.5L8 9M16 9l3 2.5L16 14M12 9l-2 6" />
+              <path d="M1 20h22" />
+            </svg>
+          </div>
           <h3>Programming</h3>
           <div class="skill-tags">
             <span class="tag tag-hot">Python</span>
@@ -257,7 +322,16 @@
 
         <!-- 4. Medical Imaging -->
         <div class="skill-group glass-card">
-          <div class="skill-group-icon">🏥</div>
+          <div class="skill-group-icon">
+            <svg class="icon-svg mri-svg" viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="12" width="48" height="28" rx="14" stroke-width="2.5" />
+              <circle cx="26" cy="26" r="9" stroke-width="2" />
+              <circle cx="26" cy="26" r="12.5" stroke-width="1.2" stroke-dasharray="3 3" class="mri-ring-1"
+                opacity="0.65" />
+              <line x1="4" y1="26" x2="17" y2="26" stroke-width="3" stroke-linecap="round" />
+              <line x1="35" y1="26" x2="48" y2="26" stroke-width="3" stroke-linecap="round" />
+            </svg>
+          </div>
           <h3>Medical Imaging &amp; AI</h3>
           <div class="skill-tags">
             <span class="tag tag-hot">Chest X-ray Analysis</span>
@@ -271,7 +345,12 @@
 
         <!-- 5. Embedded & IoT -->
         <div class="skill-group glass-card">
-          <div class="skill-group-icon">📟</div>
+          <div class="skill-group-icon">
+            <svg class="icon-svg icon-ping" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="7" y="7" width="10" height="10" rx="1" />
+              <path d="M9 3v4M12 3v4M15 3v4M9 17v4M12 17v4M15 17v4M3 9h4M3 12h4M3 15h4M17 9h4M17 12h4M17 15h4" />
+            </svg>
+          </div>
           <h3>Embedded &amp; IoT</h3>
           <div class="skill-tags">
             <span class="tag">ESP32</span>
@@ -285,7 +364,13 @@
 
         <!-- 6. Tools -->
         <div class="skill-group glass-card">
-          <div class="skill-group-icon">🛠</div>
+          <div class="skill-group-icon">
+            <svg class="icon-svg icon-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="3" />
+              <path
+                d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
+            </svg>
+          </div>
           <h3>Tools &amp; DevOps</h3>
           <div class="skill-tags">
             <span class="tag">Linux</span>
@@ -303,6 +388,78 @@
   <!-- ─── EDUCATION ─────────────────────────────────────────── -->
   <section id="education" class="section">
     <div class="container">
+      <!-- ── Education: Animated Gear System ── -->
+      <div class="section-robot edu-gears" aria-hidden="true">
+        <svg class="edu-gears-svg" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" overflow="visible">
+          <!-- Gear 1: large, 8 teeth — center (85,130) -->
+          <g class="edu-gear-1">
+            <circle cx="85" cy="130" r="30" fill="none" stroke="#0ea5e9" stroke-width="2.5" opacity="0.7" />
+            <circle cx="85" cy="130" r="11" fill="none" stroke="#0ea5e9" stroke-width="2" opacity="0.5" />
+            <line x1="74" y1="130" x2="96" y2="130" stroke="#0ea5e9" stroke-width="1.5" opacity="0.4" />
+            <line x1="85" y1="119" x2="85" y2="141" stroke="#0ea5e9" stroke-width="1.5" opacity="0.4" />
+            <rect x="79" y="80" width="12" height="20" rx="3" fill="#0ea5e9" opacity="0.55"
+              transform="rotate(0,85,130)" />
+            <rect x="79" y="80" width="12" height="20" rx="3" fill="#0ea5e9" opacity="0.55"
+              transform="rotate(45,85,130)" />
+            <rect x="79" y="80" width="12" height="20" rx="3" fill="#0ea5e9" opacity="0.55"
+              transform="rotate(90,85,130)" />
+            <rect x="79" y="80" width="12" height="20" rx="3" fill="#0ea5e9" opacity="0.55"
+              transform="rotate(135,85,130)" />
+            <rect x="79" y="80" width="12" height="20" rx="3" fill="#0ea5e9" opacity="0.55"
+              transform="rotate(180,85,130)" />
+            <rect x="79" y="80" width="12" height="20" rx="3" fill="#0ea5e9" opacity="0.55"
+              transform="rotate(225,85,130)" />
+            <rect x="79" y="80" width="12" height="20" rx="3" fill="#0ea5e9" opacity="0.55"
+              transform="rotate(270,85,130)" />
+            <rect x="79" y="80" width="12" height="20" rx="3" fill="#0ea5e9" opacity="0.55"
+              transform="rotate(315,85,130)" />
+          </g>
+          <!-- Gear 2: medium, 6 teeth — center (190,72) -->
+          <g class="edu-gear-2">
+            <circle cx="190" cy="72" r="20" fill="none" stroke="#6366f1" stroke-width="2" opacity="0.7" />
+            <circle cx="190" cy="72" r="7" fill="none" stroke="#6366f1" stroke-width="1.5" opacity="0.5" />
+            <rect x="184" y="45" width="12" height="14" rx="2.5" fill="#6366f1" opacity="0.55"
+              transform="rotate(0,190,72)" />
+            <rect x="184" y="45" width="12" height="14" rx="2.5" fill="#6366f1" opacity="0.55"
+              transform="rotate(60,190,72)" />
+            <rect x="184" y="45" width="12" height="14" rx="2.5" fill="#6366f1" opacity="0.55"
+              transform="rotate(120,190,72)" />
+            <rect x="184" y="45" width="12" height="14" rx="2.5" fill="#6366f1" opacity="0.55"
+              transform="rotate(180,190,72)" />
+            <rect x="184" y="45" width="12" height="14" rx="2.5" fill="#6366f1" opacity="0.55"
+              transform="rotate(240,190,72)" />
+            <rect x="184" y="45" width="12" height="14" rx="2.5" fill="#6366f1" opacity="0.55"
+              transform="rotate(300,190,72)" />
+          </g>
+          <!-- Gear 3: small, 5 teeth — center (215,192) -->
+          <g class="edu-gear-3">
+            <circle cx="215" cy="192" r="14" fill="none" stroke="#64748b" stroke-width="1.8" opacity="0.6" />
+            <circle cx="215" cy="192" r="5" fill="none" stroke="#64748b" stroke-width="1.2" opacity="0.4" />
+            <rect x="211" y="171" width="8" height="11" rx="2" fill="#64748b" opacity="0.5"
+              transform="rotate(0,215,192)" />
+            <rect x="211" y="171" width="8" height="11" rx="2" fill="#64748b" opacity="0.5"
+              transform="rotate(72,215,192)" />
+            <rect x="211" y="171" width="8" height="11" rx="2" fill="#64748b" opacity="0.5"
+              transform="rotate(144,215,192)" />
+            <rect x="211" y="171" width="8" height="11" rx="2" fill="#64748b" opacity="0.5"
+              transform="rotate(216,215,192)" />
+            <rect x="211" y="171" width="8" height="11" rx="2" fill="#64748b" opacity="0.5"
+              transform="rotate(288,215,192)" />
+          </g>
+          <!-- Connector lines (drive shaft visual) -->
+          <line x1="85" y1="130" x2="190" y2="72" stroke="#0ea5e9" stroke-width="1" stroke-dasharray="4,4"
+            opacity="0.25" />
+          <line x1="190" y1="72" x2="215" y2="192" stroke="#6366f1" stroke-width="1" stroke-dasharray="4,4"
+            opacity="0.2" />
+          <!-- Circuit board dots -->
+          <circle cx="85" cy="130" r="4" fill="#0ea5e9" opacity="0.5" />
+          <circle cx="190" cy="72" r="3" fill="#6366f1" opacity="0.5" />
+          <circle cx="215" cy="192" r="2.5" fill="#64748b" opacity="0.45" />
+          <!-- Decorative circuit traces -->
+          <path d="M115 130 L140 130 L140 110 L190 110" fill="none" stroke="#0ea5e9" stroke-width="1" opacity="0.2" />
+          <path d="M190 92  L190 130 L215 130 L215 178" fill="none" stroke="#6366f1" stroke-width="1" opacity="0.18" />
+        </svg>
+      </div>
       <div class="section-label">03 / Education</div>
       <h2 class="section-title">Academic Background</h2>
       <div class="timeline">
@@ -312,7 +469,11 @@
             <div class="timeline-period">Apr 2024 – Sep 2026</div>
             <h3>M.Sc. Autonomy Technologies</h3>
             <div class="timeline-org">Friedrich-Alexander-Universität Erlangen–Nürnberg (FAU)</div>
-            <div class="timeline-loc">📍 Erlangen, Germany</div>
+            <div class="timeline-loc"><svg class="loc-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M20 10c0 6-8 13-8 13s-8-7-8-13a8 8 0 0 1 16 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg> Erlangen, Germany</div>
             <div class="timeline-stats">
               <span><strong>ECTS:</strong> 62.5 / 120</span>
               <span><strong>GPA:</strong> 2.7</span>
@@ -338,11 +499,21 @@
             <div class="timeline-period">Aug 2018 – Jul 2022</div>
             <h3>B.Tech Automation &amp; Robotics</h3>
             <div class="timeline-org">KLE Technological University</div>
-            <div class="timeline-loc">📍 Hubballi, India</div>
+            <div class="timeline-loc"><svg class="loc-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M20 10c0 6-8 13-8 13s-8-7-8-13a8 8 0 0 1 16 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg> Hubballi, India</div>
             <div class="timeline-stats">
               <span><strong>GPA:</strong> 2.3</span>
             </div>
-            <p class="thesis-note">📄 Bachelor's Thesis: <em>"Automated Grading and Sorting System using Computer
+            <p class="thesis-note"><svg class="doc-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14,2 14,8 20,8" />
+                <line x1="8" y1="13" x2="16" y2="13" />
+                <line x1="8" y1="17" x2="16" y2="17" />
+              </svg> Bachelor's Thesis: <em>"Automated Grading and Sorting System using Computer
                 Vision"</em></p>
           </div>
         </div>
@@ -483,7 +654,11 @@
         </div>
         <div class="project-body">
           <div class="project-badges">
-            <span class="pbadge pbadge-star">⭐ Key Highlight</span>
+            <span class="pbadge pbadge-star"><svg style="width:12px;height:12px;vertical-align:-1px;margin-right:3px"
+                viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>Key Highlight</span>
             <span class="pbadge">Robotics</span>
             <span class="pbadge">Computer Vision</span>
             <span class="pbadge">Manipulation</span>
@@ -500,21 +675,37 @@
           </p>
           <div class="featured-highlights">
             <div class="fh-item">
-              <span class="fh-icon">🎯</span>
+              <span class="fh-icon"><svg class="icon-svg icon-pulse" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="10" />
+                  <circle cx="12" cy="12" r="6" />
+                  <circle cx="12" cy="12" r="2" />
+                  <path d="M22 12h-4M6 12H2M12 2v4M12 16v4" />
+                </svg></span>
               <div><strong>HSV Colour Detection</strong>
                 <p>Dual-range red HSV detection + TF2 camera-to-base-frame transform for precise 3D object localisation
                 </p>
               </div>
             </div>
             <div class="fh-item">
-              <span class="fh-icon">🦾</span>
+              <span class="fh-icon"><svg class="icon-svg icon-bob" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.5">
+                  <path d="M4 20h5l2-8 5-2 2-6" />
+                  <circle cx="18" cy="4" r="2" />
+                  <path d="M7 20c0-1.1.9-2 2-2h5a2 2 0 0 1 0 4H9a2 2 0 0 1-2-2z" />
+                </svg></span>
               <div><strong>MoveIt2 Motion Planning</strong>
                 <p>Cartesian trajectory planning with configurable hover &amp; approach Z offsets; 10s startup delay for
                   system readiness</p>
               </div>
             </div>
             <div class="fh-item">
-              <span class="fh-icon">⚙️</span>
+              <span class="fh-icon"><svg class="icon-svg icon-spin" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="3" />
+                  <path
+                    d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
+                </svg></span>
               <div><strong>Grasp Manager</strong>
                 <p>Custom joint attach/detach node via Ignition service CLI — enables reliable object holding during arm
                   motion</p>
@@ -540,7 +731,12 @@
         <!-- ROBOTICS -->
         <div class="project-card glass-card" id="proj-amr">
           <div class="project-visual pv-robotics">
-            <div class="pv-icon">🦾</div>
+            <div class="pv-icon"><svg class="icon-svg icon-bob" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.3">
+                <path d="M4 20h5l2-8 5-2 2-6" />
+                <circle cx="18" cy="4" r="2" />
+                <path d="M7 20c0-1.1.9-2 2-2h5a2 2 0 0 1 0 4H9a2 2 0 0 1-2-2z" />
+              </svg></div>
           </div>
           <div class="project-body">
             <div class="project-badges">
@@ -564,7 +760,12 @@
         <!-- COMPUTER VISION -->
         <div class="project-card glass-card" id="proj-sort">
           <div class="project-visual pv-cv">
-            <div class="pv-icon">👁</div>
+            <div class="pv-icon"><svg class="icon-svg icon-bob" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.3">
+                <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z" />
+                <circle cx="12" cy="12" r="3" />
+                <circle cx="12" cy="12" r="1" fill="currentColor" />
+              </svg></div>
           </div>
           <div class="project-body">
             <div class="project-badges">
@@ -584,7 +785,13 @@
 
         <div class="project-card glass-card" id="proj-driver">
           <div class="project-visual pv-driver">
-            <div class="pv-icon">😴</div>
+            <div class="pv-icon"><svg class="icon-svg icon-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.3">
+                <circle cx="12" cy="14" r="7" />
+                <path d="M9 12h.01M15 12h.01M9.5 16.5c.8 1 2.2 1 3 0" />
+                <path d="M16 5l-2 3h3l-2 3" />
+                <path d="M8 5 6 8" />
+              </svg></div>
           </div>
           <div class="project-body">
             <div class="project-badges">
@@ -605,7 +812,22 @@
         <!-- MEDICAL AI -->
         <div class="project-card glass-card" id="proj-xray">
           <div class="project-visual pv-medical">
-            <div class="pv-icon">🫁</div>
+            <div class="pv-icon">
+              <svg class="icon-svg mri-svg" viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="1.4">
+                <rect x="2" y="12" width="48" height="28" rx="14" stroke-width="2" />
+                <circle cx="26" cy="26" r="9" stroke-width="1.8" />
+                <circle cx="26" cy="26" r="5.5" stroke-width="0.9" opacity="0.5" />
+                <circle cx="26" cy="26" r="12.5" stroke-width="1" stroke-dasharray="3 3" class="mri-ring-1"
+                  opacity="0.6" />
+                <circle cx="26" cy="26" r="16" stroke-width="0.8" stroke-dasharray="2 4" class="mri-ring-2"
+                  opacity="0.35" />
+                <line x1="4" y1="26" x2="17" y2="26" stroke-width="2.5" stroke-linecap="round" />
+                <line x1="35" y1="26" x2="48" y2="26" stroke-width="2.5" stroke-linecap="round" />
+                <line x1="26" y1="18" x2="26" y2="34" stroke-width="1" opacity="0.45" class="mri-scan-beam" />
+                <circle cx="8" cy="19" r="1.5" fill="currentColor" opacity="0.5" />
+                <circle cx="44" cy="19" r="1.5" fill="currentColor" opacity="0.5" />
+              </svg>
+            </div>
           </div>
           <div class="project-body">
             <div class="project-badges">
@@ -627,7 +849,11 @@
 
         <div class="project-card glass-card" id="proj-dl-classify">
           <div class="project-visual pv-dl">
-            <div class="pv-icon">🧬</div>
+            <div class="pv-icon"><svg class="icon-svg icon-bob" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.3">
+                <path d="M5 3c.5 5 3.5 7 7 9s6.5 4 7 9M5 21c.5-5 3.5-7 7-9s6.5-4 7-9" />
+                <path d="M5 9h14M5 15h14" />
+              </svg></div>
           </div>
           <div class="project-body">
             <div class="project-badges">
@@ -649,7 +875,13 @@
         <!-- IoT -->
         <div class="project-card glass-card" id="proj-iot">
           <div class="project-visual pv-iot">
-            <div class="pv-icon">📶</div>
+            <div class="pv-icon"><svg class="icon-svg icon-ping" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.3">
+                <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+                <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+                <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+                <circle cx="12" cy="20" r="1.5" fill="currentColor" />
+              </svg></div>
           </div>
           <div class="project-body">
             <div class="project-badges">
@@ -684,15 +916,23 @@
               Project</strong> in medical image computing, low-data learning, or clinical AI. Open to hospital-based and
             academic research environments.</p>
           <div class="contact-links">
-            <a href="mailto:ganeshreddy30102000@gmail.com" class="contact-link" id="contact-email">
-              <div class="clink-icon">✉</div>
+            <a href="mailto:ganeshsreddy1@gmail.com" class="contact-link" id="contact-email">
+              <div class="clink-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg></div>
               <div>
                 <div class="clink-label">Email</div>
-                <div class="clink-val">ganeshreddy30102000@gmail.com</div>
+                <div class="clink-val">ganeshsreddy1@gmail.com</div>
               </div>
             </a>
             <a href="tel:+4915510182395" class="contact-link" id="contact-phone">
-              <div class="clink-icon">📞</div>
+              <div class="clink-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.12 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg></div>
               <div>
                 <div class="clink-label">Phone</div>
                 <div class="clink-val">+49 1551 018 2395</div>
@@ -707,7 +947,10 @@
               </div>
             </a>
             <a href="https://github.com/gsr07" target="_blank" class="contact-link" id="contact-github">
-              <div class="clink-icon">⌥</div>
+              <div class="clink-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                </svg></div>
               <div>
                 <div class="clink-label">GitHub</div>
                 <div class="clink-val">gsr07</div>
@@ -715,9 +958,9 @@
             </a>
           </div>
           <div class="languages">
-            <span class="lang-pill"><span class="lang-flag">🇬🇧</span> English (C1)</span>
-            <span class="lang-pill"><span class="lang-flag">🇩🇪</span> German (A2)</span>
-            <span class="lang-pill"><span class="lang-flag">🇮🇳</span> Hindi (Native)</span>
+            <span class="lang-pill"><span class="lang-flag lang-flag-en">EN</span> English (C1)</span>
+            <span class="lang-pill"><span class="lang-flag lang-flag-de">DE</span> German (A2)</span>
+            <span class="lang-pill"><span class="lang-flag lang-flag-hi">HI</span> Hindi (Native)</span>
           </div>
         </div>
         <div class="contact-cta">
@@ -729,7 +972,11 @@
             </svg>
             Download Full CV
           </a>
-          <p class="cta-note">📍 Based in Erlangen, Germany · Open to remote &amp; on-site research</p>
+          <p class="cta-note"><svg class="pin-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M20 10c0 6-8 13-8 13s-8-7-8-13a8 8 0 0 1 16 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg> Based in Erlangen, Germany · Open to remote &amp; on-site research</p>
         </div>
       </div>
     </div>
