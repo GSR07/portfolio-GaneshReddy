@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ganesh Reddy — Autonomy & AI Engineer</title>
+  <meta name="description"
+    content="Portfolio of Ganesh Reddy — Master's student in Autonomy Technologies at FAU Erlangen. Specialising in medical imaging, computer vision, deep learning and robotics." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=16" />
+</head>
+
+<body>
+  <!-- ─── NAV ──────────────────────────────────────────────── -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">GR<span class="accent">.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="#contact" class="btn-nav">Contact</a></li>
+    </ul>
+    <button id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-bg" style="background-color: var(--bg);">
+      <div class="grid-overlay"></div>
+      <div class="section-robot drone-swarm" aria-hidden="true">
+        <div class="swarm-drone d1">
+          <div class="dr-body"></div>
+          <div class="dr-prop p1"></div>
+          <div class="dr-prop p2"></div>
+          <div class="dr-prop p3"></div>
+          <div class="dr-prop p4"></div>
+        </div>
+        <div class="swarm-drone d2">
+          <div class="dr-body"></div>
+          <div class="dr-prop p1"></div>
+          <div class="dr-prop p2"></div>
+          <div class="dr-prop p3"></div>
+          <div class="dr-prop p4"></div>
+        </div>
+        <div class="swarm-drone d3">
+          <div class="dr-body"></div>
+          <div class="dr-prop p1"></div>
+          <div class="dr-prop p2"></div>
+          <div class="dr-prop p3"></div>
+          <div class="dr-prop p4"></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for Master's Thesis &amp; Research
+      </div>
+      <h1>Ganesh <span class="gradient-text">Reddy</span></h1>
+      <p class="hero-tagline" id="typed-target"></p>
+      <p class="hero-sub">
+        Master's student at <strong>FAU Erlangen</strong> · Robotics &amp; Autonomy · Computer Vision · Embedded Systems
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary" id="view-work-btn">View My Work</a>
+        <a href="cv/cv/Ganesh_Reddy_CV_Autonomy_technologies.pdf" target="_blank" class="btn-ghost"
+          id="download-cv-btn">Download CV</a>
+      </div>
+      <div class="hero-socials">
+        <a href="mailto:ganeshreddy30102000@gmail.com" aria-label="Email" id="email-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/ganeshssreddy09" target="_blank" aria-label="LinkedIn" id="linkedin-link">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+        </a>
+        <a href="https://github.com/gsr07" target="_blank" aria-label="GitHub" id="github-link">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <div class="photo-ring"></div>
+      <img src="ganesh_photo.jpg" alt="Ganesh Reddy" class="hero-photo" id="profile-photo" />
+    </div>
+    <a href="#about" class="scroll-down" aria-label="Scroll down">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M5 12l7 7 7-7" />
+      </svg>
+    </a>
+  </section>
+
+  <!-- ─── ABOUT ─────────────────────────────────────────────── -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-robot about-arm-sim" aria-hidden="true">
+        <div class="omni-arm pnp-mode">
+          <div class="omni-base"></div>
+          <div class="omni-shoulder">
+            <div class="omni-link1">
+              <div class="omni-elbow">
+                <div class="omni-link2">
+                  <div class="omni-wrist">
+                    <div class="omni-gripper"></div>
+                    <div class="pnp-cube"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-label">01 / About</div>
+      <h2 class="section-title">Who I Am</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm a <strong>Master's student in Autonomy Technologies</strong> at Friedrich-Alexander-Universität (FAU),
+            with a profound focus on exactly the trinity of modern intelligent machines: <strong>Robotics, Computer
+              Vision, and Embedded Systems</strong>.</p>
+          <p>My work bridges cutting-edge perception with real-world physical actuation. On the software side, I build
+            robust deep learning inference pipelines, implement YOLO-based real-time detection, and orchestrate complex
+            kinematics using ROS2 and MoveIt2. I thrive on the challenge of granting intelligence to machines moving
+            autonomously in complex environments.</p>
+          <p>On the hardware side, I dive deep into bare-metal firmware, custom PCB design, and sensor fusion using EKF
+            and Nav2. By mastering both the high-level cognitive algorithms and the low-level motor controllers, I
+            engineer comprehensive, "full-stack" robotic architectures from the circuit board to the cloud.</p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <span class="highlight-num">67.5</span>
+              <span class="highlight-label">ECTS Earned</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-num">2+</span>
+              <span class="highlight-label">Years Experience</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-num">3</span>
+              <span class="highlight-label">Languages</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-card glass-card">
+          <div class="card-chip">Research Focus</div>
+          <ul class="focus-list">
+            <li>
+              <span class="focus-icon">🤖</span>
+              <div>
+                <strong>Robotics &amp; Manipulation</strong>
+                <p>ROS2, MoveIt2, Franka Panda, Nav2, Gazebo/Ignition simulation</p>
+              </div>
+            </li>
+            <li>
+              <span class="focus-icon">👁</span>
+              <div>
+                <strong>Computer Vision</strong>
+                <p>OpenCV, YOLO, HSV segmentation, TF2 transforms, object detection</p>
+              </div>
+            </li>
+            <li>
+              <span class="focus-icon">🧠</span>
+              <div>
+                <strong>Medical Image Computing</strong>
+                <p>Chest X-ray analysis, disease classification, domain adaptation</p>
+              </div>
+            </li>
+            <li>
+              <span class="focus-icon">📡</span>
+              <div>
+                <strong>Embedded &amp; IoT</strong>
+                <p>ESP32, BLE, custom PCBs, firmware, sensor fusion</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SKILLS ────────────────────────────────────────────── -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-robot skills-scanner" aria-hidden="true">
+        <div class="s-turtlebot scan-mode">
+          <div class="tb-layer tb-base"></div>
+          <div class="tb-layer tb-mid"></div>
+          <div class="tb-layer tb-top"></div>
+          <div class="tb-lidar">
+            <div class="lidar-ray"></div>
+          </div>
+          <!-- V-shape scan cone — always points robot-forward -->
+          <div class="v-scan-cone"></div>
+          <div class="v-scan-cone v-scan-inner"></div>
+        </div>
+      </div>
+      <div class="section-label">02 / Skills</div>
+      <h2 class="section-title">Technical Stack</h2>
+      <div class="skills-grid">
+
+        <!-- 1. Robotics — PRIMARY -->
+        <div class="skill-group glass-card skill-primary">
+          <div class="skill-group-icon">🤖</div>
+          <h3>Robotics &amp; Manipulation</h3>
+          <div class="skill-tags">
+            <span class="tag tag-hot">ROS2</span>
+            <span class="tag tag-hot">MoveIt2</span>
+            <span class="tag tag-hot">Franka Panda</span>
+            <span class="tag">Nav2</span>
+            <span class="tag">Gazebo / Ignition</span>
+            <span class="tag">Kinematics</span>
+            <span class="tag">EKF</span>
+            <span class="tag">SolidWorks</span>
+          </div>
+        </div>
+
+        <!-- 2. Computer Vision — SECONDARY -->
+        <div class="skill-group glass-card skill-secondary">
+          <div class="skill-group-icon">👁</div>
+          <h3>Computer Vision</h3>
+          <div class="skill-tags">
+            <span class="tag tag-hot">OpenCV</span>
+            <span class="tag tag-hot">YOLO</span>
+            <span class="tag">HSV Colour Detection</span>
+            <span class="tag">TF2 Transforms</span>
+            <span class="tag">Object Detection</span>
+            <span class="tag">Image Preprocessing</span>
+          </div>
+        </div>
+
+        <!-- 3. Programming -->
+        <div class="skill-group glass-card">
+          <div class="skill-group-icon">💻</div>
+          <h3>Programming</h3>
+          <div class="skill-tags">
+            <span class="tag tag-hot">Python</span>
+            <span class="tag">C++</span>
+            <span class="tag">MATLAB</span>
+            <span class="tag">Embedded C</span>
+          </div>
+        </div>
+
+        <!-- 4. Medical Imaging -->
+        <div class="skill-group glass-card">
+          <div class="skill-group-icon">🏥</div>
+          <h3>Medical Imaging &amp; AI</h3>
+          <div class="skill-tags">
+            <span class="tag tag-hot">Chest X-ray Analysis</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">CNNs</span>
+            <span class="tag">Transfer Learning</span>
+            <span class="tag">Dataset Curation</span>
+          </div>
+        </div>
+
+        <!-- 5. Embedded & IoT -->
+        <div class="skill-group glass-card">
+          <div class="skill-group-icon">📟</div>
+          <h3>Embedded &amp; IoT</h3>
+          <div class="skill-tags">
+            <span class="tag">ESP32</span>
+            <span class="tag">Arduino</span>
+            <span class="tag">Raspberry Pi</span>
+            <span class="tag">BLE</span>
+            <span class="tag">KiCad</span>
+            <span class="tag">ESP-IDF</span>
+          </div>
+        </div>
+
+        <!-- 6. Tools -->
+        <div class="skill-group glass-card">
+          <div class="skill-group-icon">🛠</div>
+          <h3>Tools &amp; DevOps</h3>
+          <div class="skill-tags">
+            <span class="tag">Linux</span>
+            <span class="tag">Git</span>
+            <span class="tag">Docker</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">Simulink</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EDUCATION ─────────────────────────────────────────── -->
+  <section id="education" class="section">
+    <div class="container">
+      <div class="section-label">03 / Education</div>
+      <h2 class="section-title">Academic Background</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-period">Apr 2024 – Sep 2026</div>
+            <h3>M.Sc. Autonomy Technologies</h3>
+            <div class="timeline-org">Friedrich-Alexander-Universität Erlangen–Nürnberg (FAU)</div>
+            <div class="timeline-loc">📍 Erlangen, Germany</div>
+            <div class="timeline-stats">
+              <span><strong>ECTS:</strong> 62.5 / 120</span>
+              <span><strong>GPA:</strong> 2.7</span>
+            </div>
+            <div class="coursework">
+              <div class="coursework-label">Relevant Coursework</div>
+              <div class="course-pills">
+                <span class="pill">Deep Learning</span>
+                <span class="pill">Pattern Recognition</span>
+                <span class="pill">Computer Vision</span>
+                <span class="pill">ML in Signal Processing</span>
+                <span class="pill">AI in Medical Robotics</span>
+                <span class="pill">Robotics in Surgery &amp; Diagnostics</span>
+                <span class="pill">Human-Robot Co-adaptation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-period">Aug 2018 – Jul 2022</div>
+            <h3>B.Tech Automation &amp; Robotics</h3>
+            <div class="timeline-org">KLE Technological University</div>
+            <div class="timeline-loc">📍 Hubballi, India</div>
+            <div class="timeline-stats">
+              <span><strong>GPA:</strong> 2.3</span>
+            </div>
+            <p class="thesis-note">📄 Bachelor's Thesis: <em>"Automated Grading and Sorting System using Computer
+                Vision"</em></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EXPERIENCE ────────────────────────────────────────── -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <div class="section-label">04 / Experience</div>
+      <h2 class="section-title">Work &amp; Research</h2>
+
+      <!-- High-Fidelity 3D Soldering Simulation Background -->
+      <div class="section-robot experience-solder" aria-hidden="true">
+        <div class="solder-arm experience-arm">
+          <div class="omni-shoulder">
+            <div class="omni-link1">
+              <div class="omni-elbow">
+                <div class="omni-link2">
+                  <div class="omni-wrist jitter">
+                    <div class="solder-tip"></div>
+                    <div class="smoke-puff sp1"></div>
+                    <div class="smoke-puff sp2"></div>
+                    <div class="smoke-puff sp3"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pcb-board exp-pcb">
+          <!-- IC chips -->
+          <div class="pcb-ic ic1"><span>ESP32</span></div>
+          <div class="pcb-ic ic2"><span>MCU</span></div>
+          <!-- Capacitors -->
+          <div class="pcb-cap cap1"></div>
+          <div class="pcb-cap cap2"></div>
+          <div class="pcb-cap cap3"></div>
+          <!-- Resistors -->
+          <div class="pcb-res res1"></div>
+          <div class="pcb-res res2"></div>
+          <div class="pcb-res res3"></div>
+          <div class="pcb-res res4"></div>
+          <!-- LED indicator -->
+          <div class="pcb-led led-active"></div>
+          <!-- Copper traces -->
+          <div class="pcb-trace tr1"></div>
+          <div class="pcb-trace tr2"></div>
+          <div class="pcb-trace tr3"></div>
+          <!-- Solder point (active joint) -->
+          <div class="pcb-solder-pt"></div>
+        </div>
+        <div class="spark-shower">
+          <div class="spark p1"></div>
+          <div class="spark p2"></div>
+          <div class="spark p3"></div>
+          <div class="spark p4"></div>
+          <div class="spark p5"></div>
+          <div class="spark p6"></div>
+          <div class="spark p7"></div>
+          <div class="spark p8"></div>
+          <div class="spark p9"></div>
+          <div class="spark p10"></div>
+        </div>
+      </div>
+      <div class="exp-grid">
+
+        <div class="exp-card glass-card">
+          <div class="exp-header">
+            <div class="exp-badge exp-badge-research">Research</div>
+            <div class="exp-period">Nov 2025 – Present</div>
+          </div>
+          <h3>Student Research Assistant</h3>
+          <div class="exp-org">IDEA LABS · FAU Erlangen</div>
+          <ul class="exp-bullets">
+            <li>Develop and maintain Python-based data analysis pipelines for scientific datasets</li>
+            <li>Perform data preprocessing, validation, and quality checks on structured datasets</li>
+            <li>Support debugging, reproducibility, and evaluation of machine learning workflows</li>
+            <li>Create automated evaluation scripts and structured experiment reports</li>
+          </ul>
+        </div>
+
+        <div class="exp-card glass-card">
+          <div class="exp-header">
+            <div class="exp-badge exp-badge-industry">Industry</div>
+            <div class="exp-period">Jan 2023 – Oct 2023</div>
+          </div>
+          <h3>Internet of Things Engineer</h3>
+          <div class="exp-org">Digital Associates India · Hyderabad</div>
+          <ul class="exp-bullets">
+            <li>Designed Python-based data processing pipelines for large real-world sensor datasets</li>
+            <li>Built BLE-based indoor localisation systems using ESP32 and custom PCBs</li>
+            <li>Implemented OpenCV-based computer vision pipelines for detection and validation</li>
+            <li>Built firmware via ESP-IDF for real-time sensor communication</li>
+          </ul>
+        </div>
+
+        <div class="exp-card glass-card">
+          <div class="exp-header">
+            <div class="exp-badge exp-badge-intern">Internship</div>
+            <div class="exp-period">Jan 2022 – Jul 2022</div>
+          </div>
+          <h3>Systems Engineer Intern</h3>
+          <div class="exp-org">Centre for Autonomous Systems Engineering · Hubballi</div>
+          <ul class="exp-bullets">
+            <li>Developed robotics software using ROS2 (Python/C++) and Gazebo simulation</li>
+            <li>Designed and fabricated a 5-DOF robotic arm using SolidWorks &amp; NX-CAD</li>
+            <li>Validated kinematic models and tuned Dynamixel XM motor control architecture</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ──────────────────────────────────────────── -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-label">05 / Projects</div>
+      <h2 class="section-title">Featured Work</h2>
+
+      <!-- ★ FEATURED: Franka Panda (full-width hero card) -->
+      <div class="project-card project-featured glass-card" id="proj-franka">
+        <div class="project-visual pv-franka">
+          <div class="pv-franka-content">
+            <div class="pv-franka-arm">
+              <video class="pv-franka-video" src="franka_video.mp4" autoplay loop muted playsinline
+                aria-label="Franka Panda pick and place simulation video"></video>
+            </div>
+            <div class="pv-franka-labels">
+              <span class="pv-label">ROS2</span>
+              <span class="pv-label">MoveIt2</span>
+              <span class="pv-label">OpenCV</span>
+              <span class="pv-label">Ignition</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-badges">
+            <span class="pbadge pbadge-star">⭐ Key Highlight</span>
+            <span class="pbadge">Robotics</span>
+            <span class="pbadge">Computer Vision</span>
+            <span class="pbadge">Manipulation</span>
+          </div>
+          <h3>Franka Panda — Vision-Guided Pick &amp; Place Simulation</h3>
+          <p class="featured-desc">Full ROS2 + MoveIt2 simulation of the Franka Emika Panda 7-DOF robot arm performing
+            autonomous colour-targeted pick-and-place in Ignition Gazebo (Fortress). A custom
+            <strong>ColorDetector</strong> ROS2 node processes live camera images using HSV segmentation and TF2
+            transforms to localise Red, Green, and Blue objects in the robot's base frame. A
+            <strong>GraspManager</strong> node monitors gripper joint states and dynamically creates/removes fixed
+            joints in Gazebo to reliably attach and release objects — solving the physics engine grasping limitation.
+            The full pipeline is orchestrated via a single launch file: Gazebo → ros2_control → MoveIt2 → Vision → Grasp
+            → Pick &amp; Place.
+          </p>
+          <div class="featured-highlights">
+            <div class="fh-item">
+              <span class="fh-icon">🎯</span>
+              <div><strong>HSV Colour Detection</strong>
+                <p>Dual-range red HSV detection + TF2 camera-to-base-frame transform for precise 3D object localisation
+                </p>
+              </div>
+            </div>
+            <div class="fh-item">
+              <span class="fh-icon">🦾</span>
+              <div><strong>MoveIt2 Motion Planning</strong>
+                <p>Cartesian trajectory planning with configurable hover &amp; approach Z offsets; 10s startup delay for
+                  system readiness</p>
+              </div>
+            </div>
+            <div class="fh-item">
+              <span class="fh-icon">⚙️</span>
+              <div><strong>Grasp Manager</strong>
+                <p>Custom joint attach/detach node via Ignition service CLI — enables reliable object holding during arm
+                  motion</p>
+              </div>
+            </div>
+          </div>
+          <div class="project-tags">
+            <span class="tag-sm">ROS2 Humble</span>
+            <span class="tag-sm">MoveIt2</span>
+            <span class="tag-sm">Ignition Gazebo</span>
+            <span class="tag-sm">OpenCV</span>
+            <span class="tag-sm">TF2</span>
+            <span class="tag-sm">ros2_control</span>
+            <span class="tag-sm">Python</span>
+            <span class="tag-sm">C++</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Remaining projects grid (3-col) -->
+      <div class="projects-grid">
+
+        <!-- ROBOTICS -->
+        <div class="project-card glass-card" id="proj-amr">
+          <div class="project-visual pv-robotics">
+            <div class="pv-icon">🦾</div>
+          </div>
+          <div class="project-body">
+            <div class="project-badges">
+              <span class="pbadge">Robotics</span>
+              <span class="pbadge">Autonomy</span>
+            </div>
+            <h3>Autonomous Mobile Robot (AMR)</h3>
+            <p>Designed and deployed an AMR with 300 kg payload capacity integrating EKF-based localisation, A*
+              navigation, and a 5-DOF robotic arm. Full ROS2 stack with Gazebo simulation, rigorous kinematic modelling
+              and motor control.</p>
+            <div class="project-tags">
+              <span class="tag-sm">ROS2</span>
+              <span class="tag-sm">Nav2</span>
+              <span class="tag-sm">EKF</span>
+              <span class="tag-sm">Gazebo</span>
+              <span class="tag-sm">SolidWorks</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- COMPUTER VISION -->
+        <div class="project-card glass-card" id="proj-sort">
+          <div class="project-visual pv-cv">
+            <div class="pv-icon">👁</div>
+          </div>
+          <div class="project-body">
+            <div class="project-badges">
+              <span class="pbadge">Computer Vision</span>
+              <span class="pbadge">Thesis</span>
+            </div>
+            <h3>Automated Grading &amp; Sorting System</h3>
+            <p>Bachelor's thesis project: automated quality grading and sorting using computer vision and real-time
+              image processing. Full integration of camera pipeline, classification model, and mechanical actuation.</p>
+            <div class="project-tags">
+              <span class="tag-sm">OpenCV</span>
+              <span class="tag-sm">Python</span>
+              <span class="tag-sm">Automation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card" id="proj-driver">
+          <div class="project-visual pv-driver">
+            <div class="pv-icon">😴</div>
+          </div>
+          <div class="project-body">
+            <div class="project-badges">
+              <span class="pbadge">Safety AI</span>
+              <span class="pbadge">Vision</span>
+            </div>
+            <h3>Driver Drowsiness Detection</h3>
+            <p>Real-time driver fatigue detection using YOLO-based face and eye landmark detection. Deployed with
+              alerting system for safety-critical usage. Optimised for low-latency inference on edge hardware.</p>
+            <div class="project-tags">
+              <span class="tag-sm">YOLO</span>
+              <span class="tag-sm">OpenCV</span>
+              <span class="tag-sm">Real-time</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MEDICAL AI -->
+        <div class="project-card glass-card" id="proj-xray">
+          <div class="project-visual pv-medical">
+            <div class="pv-icon">🫁</div>
+          </div>
+          <div class="project-body">
+            <div class="project-badges">
+              <span class="pbadge">Medical AI</span>
+              <span class="pbadge">Deep Learning</span>
+            </div>
+            <h3>Lung Disease Detection from Chest X-rays</h3>
+            <p>CNN-based models for pneumonia and tuberculosis classification using public chest X-ray datasets.
+              Implemented transfer learning and data augmentation for low-data settings, with comprehensive
+              preprocessing pipelines and cross-cohort generalisation evaluation.</p>
+            <div class="project-tags">
+              <span class="tag-sm">PyTorch</span>
+              <span class="tag-sm">CNNs</span>
+              <span class="tag-sm">Transfer Learning</span>
+              <span class="tag-sm">OpenCV</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card" id="proj-dl-classify">
+          <div class="project-visual pv-dl">
+            <div class="pv-icon">🧬</div>
+          </div>
+          <div class="project-body">
+            <div class="project-badges">
+              <span class="pbadge">Medical AI</span>
+              <span class="pbadge">ML Pipeline</span>
+            </div>
+            <h3>Medical Image Classification Pipeline</h3>
+            <p>End-to-end supervised learning pipeline for medical imaging: dataset curation, quality checks, bias
+              analysis, model training, failure-case analysis, and identification of common pitfalls in clinical imaging
+              data.</p>
+            <div class="project-tags">
+              <span class="tag-sm">PyTorch</span>
+              <span class="tag-sm">Data Curation</span>
+              <span class="tag-sm">Bias Analysis</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- IoT -->
+        <div class="project-card glass-card" id="proj-iot">
+          <div class="project-visual pv-iot">
+            <div class="pv-icon">📶</div>
+          </div>
+          <div class="project-body">
+            <div class="project-badges">
+              <span class="pbadge">IoT</span>
+              <span class="pbadge">Embedded</span>
+            </div>
+            <h3>BLE Indoor Localisation System</h3>
+            <p>BLE-based indoor localisation using ESP32 microcontrollers and custom PCBs (KiCad/Eagle), with real-time
+              dashboards for environmental sensor data (temperature, humidity, fire). Built on ESP-IDF firmware in
+              C/Python.</p>
+            <div class="project-tags">
+              <span class="tag-sm">ESP32</span>
+              <span class="tag-sm">BLE</span>
+              <span class="tag-sm">KiCad</span>
+              <span class="tag-sm">ESP-IDF</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ───────────────────────────────────────────── -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <div class="section-label">06 / Contact</div>
+      <h2 class="section-title">Let's Connect</h2>
+      <div class="contact-wrap">
+        <div class="contact-info glass-card">
+          <p class="contact-lead">I'm actively seeking a <strong>Master's Thesis</strong> and <strong>Team
+              Project</strong> in medical image computing, low-data learning, or clinical AI. Open to hospital-based and
+            academic research environments.</p>
+          <div class="contact-links">
+            <a href="mailto:ganeshreddy30102000@gmail.com" class="contact-link" id="contact-email">
+              <div class="clink-icon">✉</div>
+              <div>
+                <div class="clink-label">Email</div>
+                <div class="clink-val">ganeshreddy30102000@gmail.com</div>
+              </div>
+            </a>
+            <a href="tel:+4915510182395" class="contact-link" id="contact-phone">
+              <div class="clink-icon">📞</div>
+              <div>
+                <div class="clink-label">Phone</div>
+                <div class="clink-val">+49 1551 018 2395</div>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/ganeshssreddy09" target="_blank" class="contact-link"
+              id="contact-linkedin">
+              <div class="clink-icon">in</div>
+              <div>
+                <div class="clink-label">LinkedIn</div>
+                <div class="clink-val">ganeshssreddy09</div>
+              </div>
+            </a>
+            <a href="https://github.com/gsr07" target="_blank" class="contact-link" id="contact-github">
+              <div class="clink-icon">⌥</div>
+              <div>
+                <div class="clink-label">GitHub</div>
+                <div class="clink-val">gsr07</div>
+              </div>
+            </a>
+          </div>
+          <div class="languages">
+            <span class="lang-pill"><span class="lang-flag">🇬🇧</span> English (C1)</span>
+            <span class="lang-pill"><span class="lang-flag">🇩🇪</span> German (A2)</span>
+            <span class="lang-pill"><span class="lang-flag">🇮🇳</span> Hindi (Native)</span>
+          </div>
+        </div>
+        <div class="contact-cta">
+          <a href="cv/cv/Ganesh_Reddy_CV_Autonomy_technologies.pdf" target="_blank" class="btn-primary btn-large"
+            id="cta-cv-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 15V3m0 12-4-4m4 4 4-4" />
+              <path d="M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17" />
+            </svg>
+            Download Full CV
+          </a>
+          <p class="cta-note">📍 Based in Erlangen, Germany · Open to remote &amp; on-site research</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ────────────────────────────────────────────── -->
+  <footer>
+    <p>© 2026 Ganesh Reddy · Built with precision &amp; purpose</p>
+  </footer>
+
+  <script src="script.js?v=3"></script>
+</body>
+
+</html>

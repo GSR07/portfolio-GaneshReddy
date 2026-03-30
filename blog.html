@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Ganesh Reddy</title>
+  <meta name="description" content="Project updates and technical blog posts by Ganesh Reddy on Robotics, Computer Vision, and Embedded Systems." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=12" />
+  <style>
+    /* Blog specific styles */
+    #blog-hero {
+      padding: calc(var(--nav-h) + 60px) 40px 40px;
+      text-align: center;
+      position: relative;
+    }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 32px;
+      margin-top: 40px;
+    }
+    .blog-card {
+      display: flex;
+      flex-direction: column;
+      padding: 32px;
+      gap: 16px;
+    }
+    .blog-date {
+      font-size: 0.8rem;
+      color: var(--accent-2);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .blog-card h3 {
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+    .blog-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      flex-grow: 1;
+    }
+    .blog-read-more {
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: all var(--transition);
+    }
+    .blog-read-more:hover {
+      color: var(--accent-2);
+      transform: translateX(4px);
+    }
+  </style>
+</head>
+<body>
+  <div class="section-robot blog-swarm" aria-hidden="true" style="position: fixed; z-index: -1;">
+    <div class="swarm-drone d1"><div class="dr-body"></div><div class="dr-prop p1"></div><div class="dr-prop p2"></div><div class="dr-prop p3"></div><div class="dr-prop p4"></div></div>
+    <div class="swarm-drone d2" style="top: 20%; left: 10%;"><div class="dr-body"></div><div class="dr-prop p1"></div><div class="dr-prop p2"></div><div class="dr-prop p3"></div><div class="dr-prop p4"></div></div>
+    <div class="swarm-drone d3" style="top: 80%; left: 5%;"><div class="dr-body"></div><div class="dr-prop p1"></div><div class="dr-prop p2"></div><div class="dr-prop p3"></div><div class="dr-prop p4"></div></div>
+  </div>
+
+  <!-- ─── NAV ──────────────────────────────────────────────── -->
+  <nav id="navbar" class="scrolled">
+    <a href="index.html" class="nav-logo">GR<span class="accent">.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="index.html#education">Education</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="blog.html" class="gradient-text">Blog</a></li>
+      <li><a href="index.html#contact" class="btn-nav">Contact</a></li>
+    </ul>
+    <button id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ─── BLOG HERO ────────────────────────────────────────── -->
+  <section id="blog-hero" class="section">
+    <div class="container">
+      <div class="section-label">Journal</div>
+      <h1 class="section-title" style="margin-bottom: 24px; text-align: center;">Technical Updates</h1>
+      <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">Insights, progress logs, and deep dives into my ongoing projects in Robotics, Computer Vision, and Embedded Systems.</p>
+    </div>
+  </section>
+
+  <!-- ─── BLOG GRID ────────────────────────────────────────── -->
+  <section id="blog-posts" class="section section-alt" style="min-height: 60vh;">
+    <div class="container">
+      <div class="blog-grid">
+        
+        <!-- Post 1 -->
+        <article class="blog-card glass-card">
+          <span class="blog-date">March 30, 2026</span>
+          <h3>Tuning the Franka Panda Grasp Controllers</h3>
+          <p>A deep dive into bypassing physics engine limitations in Ignition Gazebo by creating a custom ROS2 Node that dynamically attaches objects using fixed joints.</p>
+          <a href="franka-pick-and-place-blog.html" class="blog-read-more">Read Full Post &rarr;</a>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="blog-card glass-card">
+          <span class="blog-date">February 15, 2026</span>
+          <h3>Nav2 EKF Sensor Fusion on Custom AMRs</h3>
+          <p>Integrating wheel odometry, IMU data, and 2D LiDAR into the robot_localization package for a 300kg payload autonomous mobile robot.</p>
+          <a href="#" class="blog-read-more">Read Full Post &rarr;</a>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="blog-card glass-card">
+          <span class="blog-date">January 10, 2026</span>
+          <h3>YOLOv8 Edge Inference on ESP32</h3>
+          <p>Challenges and breakthroughs from porting lighter convolutional architectures to bare-metal embedded devices with tight RAM constraints.</p>
+          <a href="#" class="blog-read-more">Read Full Post &rarr;</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ───────────────────────────────────────────── -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Ganesh Reddy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    /* Mobile Menu Toggle */
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    if (hamburger) {
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+      });
+    }
+
+    // Scroll universe logic
+    window.addEventListener('scroll', () => {
+      document.body.style.setProperty('--scrollParam', window.scrollY);
+    });
+
+    // Autonomous Background Timer
+    function updateTimeParam() {
+      document.body.style.setProperty('--timeParam', performance.now() / 1000);
+      requestAnimationFrame(updateTimeParam);
+    }
+    updateTimeParam();
+  </script>
+</body>
+</html>

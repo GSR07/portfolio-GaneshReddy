@@ -1,0 +1,30 @@
+# Personal documents - keep private
+cv/
+
+# Agent/internal files - not part of the website
+directives/
+execution/
+agents.md
+requirements.txt
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+*.swp
+*.swo
+
+# Claude Code agent files
+.claude/
+
+# Python virtual environment
+.venv/
+
+# Temp files
+.tmp/
+
+# Environment variables
+.env
+.env.*
