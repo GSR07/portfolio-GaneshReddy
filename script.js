@@ -164,3 +164,37 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     window.scrollTo({ top: offset, behavior: 'smooth' });
   });
 });
+
+/* ── Theme Toggle ─────────────────────────────────── */
+const themeToggle = document.getElementById('theme-toggle');
+if (themeToggle) {
+  const sunIcon = themeToggle.querySelector('.sun-icon');
+  const moonIcon = themeToggle.querySelector('.moon-icon');
+
+  function updateThemeIcon() {
+    if (document.documentElement.getAttribute('data-theme') === 'light') {
+      sunIcon.style.display = 'none';
+      moonIcon.style.display = 'block';
+    } else {
+      sunIcon.style.display = 'block';
+      moonIcon.style.display = 'none';
+    }
+  }
+
+  // Initial icon sync
+  updateThemeIcon();
+
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    
+    if (newTheme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
+    
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcon();
+  });
+}
