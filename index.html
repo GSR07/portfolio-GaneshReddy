@@ -4,15 +4,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ganesh Reddy — Autonomy & AI Engineer</title>
+  <title>Ganesh Reddy — Robotics & Autonomy Engineer</title>
   <meta name="description"
-    content="Portfolio of Ganesh Reddy — Master's student in Autonomy Technologies at FAU Erlangen. Specialising in medical imaging, computer vision, deep learning and robotics." />
+    content="Portfolio of Ganesh Reddy — Master's student in Autonomy Technologies at FAU Erlangen. Specialising in ROS2, MoveIt2, mobile robotics, SLAM, embedded systems, and computer vision." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=20" />
+  <link rel="stylesheet" href="style.css?v=21" />
   <script>
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'light' || (!savedTheme && window.matchMedia('(prefers-color-scheme: light)').matches)) {
@@ -60,16 +60,15 @@
     </div>
   </nav>
 
+  <!-- ─── HERO ─────────────────────────────────────────────── -->
   <section id="hero">
     <div class="hero-bg" style="background-color: var(--bg);">
       <div class="grid-overlay"></div>
       <div class="section-robot drone-swarm" aria-hidden="true">
         <div class="swarm-drone d1">
           <div class="dr-body"></div>
-          <div class="dr-prop p1"></div>
-          <div class="dr-prop p2"></div>
-          <div class="dr-prop p3"></div>
-          <div class="dr-prop p4"></div>
+          <div class="dr-prop p1"></div><div class="dr-prop p2"></div>
+          <div class="dr-prop p3"></div><div class="dr-prop p4"></div>
           <div class="dr-scanner">
             <div class="dr-scan-beam"></div>
             <div class="dr-scan-line"></div>
@@ -78,10 +77,8 @@
         </div>
         <div class="swarm-drone d2">
           <div class="dr-body"></div>
-          <div class="dr-prop p1"></div>
-          <div class="dr-prop p2"></div>
-          <div class="dr-prop p3"></div>
-          <div class="dr-prop p4"></div>
+          <div class="dr-prop p1"></div><div class="dr-prop p2"></div>
+          <div class="dr-prop p3"></div><div class="dr-prop p4"></div>
           <div class="dr-scanner">
             <div class="dr-scan-beam" style="animation-delay:0.4s"></div>
             <div class="dr-scan-line" style="animation-delay:0.4s"></div>
@@ -90,10 +87,8 @@
         </div>
         <div class="swarm-drone d3">
           <div class="dr-body"></div>
-          <div class="dr-prop p1"></div>
-          <div class="dr-prop p2"></div>
-          <div class="dr-prop p3"></div>
-          <div class="dr-prop p4"></div>
+          <div class="dr-prop p1"></div><div class="dr-prop p2"></div>
+          <div class="dr-prop p3"></div><div class="dr-prop p4"></div>
           <div class="dr-scanner">
             <div class="dr-scan-beam" style="animation-delay:0.8s"></div>
             <div class="dr-scan-line" style="animation-delay:0.8s"></div>
@@ -103,14 +98,16 @@
       </div>
     </div>
     <div class="hero-content">
+      <!-- FIX 1: Hero badge — robotics-specific, not generic -->
       <div class="hero-badge">
         <span class="badge-dot"></span>
-        Available for Master's Thesis &amp; Research
+        Open to Robotics Internship, Werkstudent &amp; M.Sc. Thesis — Germany &amp; Europe
       </div>
       <h1>Ganesh <span class="gradient-text">Reddy</span></h1>
       <p class="hero-tagline" id="typed-target"></p>
+      <!-- FIX 2: Hero sub — robotics-specific stack -->
       <p class="hero-sub">
-        Master's student at <strong>FAU Erlangen</strong> · Robotics &amp; Autonomy · Computer Vision · Embedded Systems
+        Master's student at <strong>FAU Erlangen</strong> · ROS2 · MoveIt2 · Embedded Systems · Autonomous Navigation
       </p>
       <div class="hero-actions">
         <a href="#projects" class="btn-primary" id="view-work-btn">View My Work</a>
@@ -118,7 +115,7 @@
           id="download-cv-btn">Download CV</a>
       </div>
       <div class="hero-socials">
-        <a href="mailto:ganeshsreddy1@gmail.com" aria-label="Email" id="email-link">
+        <a href="mailto:ganeshreddy30102000@gmail.com" aria-label="Email" id="email-link">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <rect x="2" y="4" width="20" height="16" rx="2" />
             <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
@@ -140,7 +137,7 @@
     </div>
     <div class="hero-photo-wrap">
       <div class="photo-ring"></div>
-      <img src="ganeh_photo.jpeg" alt="Ganesh Reddy" class="hero-photo" id="profile-photo" />
+      <img src="ganesh_photo.jpg" alt="Ganesh Reddy" class="hero-photo" id="profile-photo" />
     </div>
     <a href="#about" class="scroll-down" aria-label="Scroll down">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -173,34 +170,17 @@
       <h2 class="section-title">Who Am I<span class="arm-q-target" aria-hidden="true">?</span></h2>
       <div class="about-grid">
         <div class="about-text">
-          <p>I'm a <strong>Master's student in Autonomy Technologies</strong> at Friedrich-Alexander-Universität (FAU),
-            with a profound focus on exactly the trinity of modern intelligent machines: <strong>Robotics, Computer
-              Vision, and Embedded Systems</strong>.</p>
-          <p>My work bridges cutting-edge perception with real-world physical actuation. On the software side, I build
-            robust deep learning inference pipelines, implement YOLO-based real-time detection, and orchestrate complex
-            kinematics using ROS2 and MoveIt2. I thrive on the challenge of granting intelligence to machines moving
-            autonomously in complex environments.</p>
-          <p>On the hardware side, I dive deep into bare-metal firmware, custom PCB design, and sensor fusion using EKF
-            and Nav2. By mastering both the high-level cognitive algorithms and the low-level motor controllers, I
-            engineer comprehensive, "full-stack" robotic architectures from the circuit board to the cloud.</p>
-          <!-- <div class="about-highlights">
-            <div class="highlight-item">
-              <span class="highlight-num">6+</span>
-              <span class="highlight-label">Projects</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-num">2+</span>
-              <span class="highlight-label">Years Experience</span>
-            </div>
-          </div> -->
+          <!-- FIX 3: About text — robotics-focused, no medical AI references -->
+          <p>I'm a <strong>Master's student in Autonomy Technologies</strong> at Friedrich-Alexander-Universität (FAU) Erlangen-Nürnberg, building robotic systems end-to-end — from schematic to motion planner.</p>
+          <p>My core work is in <strong>manipulation and mobile robotics</strong>: I've built a vision-guided pick-and-place pipeline on the Franka Panda using ROS2 and MoveIt2, and deployed full autonomous navigation stacks with Nav2, AMCL, and LiDAR-IMU sensor fusion on TurtleBot3. I design in SolidWorks, simulate in Gazebo, and write firmware in C and ESP-IDF — the full stack from circuit board to trajectory planner.</p>
+          <p>I'm currently seeking a <strong>Master's thesis placement, Pflichtpraktikum (10+ weeks), or Werkstudent role</strong> in robotics, autonomous systems, or embedded engineering — at research labs, Fraunhofer institutes, or industrial teams across Germany and Europe.</p>
         </div>
         <div class="about-card glass-card">
           <div class="card-chip">Research Focus</div>
           <ul class="focus-list">
             <li>
               <span class="focus-icon">
-                <svg class="icon-svg icon-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="1.5">
+                <svg class="icon-svg icon-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                   <rect x="5" y="8" width="14" height="12" rx="2" />
                   <circle cx="9.5" cy="13.5" r="1.5" fill="currentColor" />
                   <circle cx="14.5" cy="13.5" r="1.5" fill="currentColor" />
@@ -210,7 +190,21 @@
               </span>
               <div>
                 <strong>Robotics &amp; Manipulation</strong>
-                <p>ROS2, MoveIt2, Franka Panda, Nav2, Gazebo/Ignition simulation</p>
+                <p>ROS2, MoveIt2, Franka Panda, Gazebo/Ignition simulation, D-H kinematics, Dynamixel servo control</p>
+              </div>
+            </li>
+            <li>
+              <span class="focus-icon">
+                <!-- FIX 4: Replace Medical Imaging focus with Mobile Robotics -->
+                <svg class="icon-svg icon-bob" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M4 20h5l2-8 5-2 2-6"/>
+                  <circle cx="18" cy="4" r="2"/>
+                  <path d="M7 20c0-1.1.9-2 2-2h5a2 2 0 0 1 0 4H9a2 2 0 0 1-2-2z"/>
+                </svg>
+              </span>
+              <div>
+                <strong>Mobile Robotics &amp; Navigation</strong>
+                <p>ROS2, Nav2, AMCL, SLAM, LiDAR-IMU sensor fusion, autonomous waypoint navigation</p>
               </div>
             </li>
             <li>
@@ -223,27 +217,12 @@
               </span>
               <div>
                 <strong>Computer Vision</strong>
-                <p>OpenCV, YOLO, HSV segmentation, TF2 transforms, object detection</p>
+                <p>OpenCV, YOLOv3, HSV segmentation, TF2 transforms, real-time object detection</p>
               </div>
             </li>
             <li>
               <span class="focus-icon">
-                <svg class="icon-svg icon-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="1.5">
-                  <path
-                    d="M12 5c-3.9 0-7 3.1-7 7 0 2.2 1 4.2 2.6 5.5L8 20h8l.4-2.5C18 16.2 19 14.2 19 12c0-3.9-3.1-7-7-7z" />
-                  <path d="M9 11h6M10 14h4M12 5V3" />
-                </svg>
-              </span>
-              <div>
-                <strong>Medical Image Computing</strong>
-                <p>Chest X-ray analysis, disease classification, domain adaptation</p>
-              </div>
-            </li>
-            <li>
-              <span class="focus-icon">
-                <svg class="icon-svg icon-ping" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="1.5">
+                <svg class="icon-svg icon-ping" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                   <path d="M5 12.55a11 11 0 0 1 14.08 0" />
                   <path d="M1.42 9a16 16 0 0 1 21.16 0" />
                   <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
@@ -252,7 +231,7 @@
               </span>
               <div>
                 <strong>Embedded &amp; IoT</strong>
-                <p>ESP32, BLE, custom PCBs, firmware, sensor fusion</p>
+                <p>ESP32, BLE, KiCad PCB design, ESP-IDF firmware, MQTT, OTA updates</p>
               </div>
             </li>
           </ul>
@@ -269,10 +248,7 @@
           <div class="tb-layer tb-base"></div>
           <div class="tb-layer tb-mid"></div>
           <div class="tb-layer tb-top"></div>
-          <div class="tb-lidar">
-            <div class="lidar-ray"></div>
-          </div>
-          <!-- V-shape scan cone — always points robot-forward -->
+          <div class="tb-lidar"><div class="lidar-ray"></div></div>
           <div class="v-scan-cone"></div>
           <div class="v-scan-cone v-scan-inner"></div>
         </div>
@@ -281,7 +257,6 @@
       <h2 class="section-title">Technical Stack</h2>
       <div class="skills-grid">
 
-        <!-- 1. Robotics — PRIMARY -->
         <div class="skill-group glass-card skill-primary">
           <div class="skill-group-icon">
             <svg class="icon-svg icon-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -299,12 +274,11 @@
             <span class="tag" style="--skill-level: 80%;" data-percent="80%">Nav2</span>
             <span class="tag" style="--skill-level: 85%;" data-percent="85%">Gazebo / Ignition</span>
             <span class="tag" style="--skill-level: 85%;" data-percent="85%">Kinematics</span>
-            <span class="tag" style="--skill-level: 75%;" data-percent="75%">EKF</span>
+            <span class="tag" style="--skill-level: 75%;" data-percent="75%">EKF / Sensor Fusion</span>
             <span class="tag" style="--skill-level: 70%;" data-percent="70%">SolidWorks</span>
           </div>
         </div>
 
-        <!-- 2. Computer Vision — SECONDARY -->
         <div class="skill-group glass-card skill-secondary">
           <div class="skill-group-icon">
             <svg class="icon-svg icon-bob" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -317,12 +291,12 @@
           <div class="skill-tags">
             <span class="tag tag-hot" style="--skill-level: 90%;" data-percent="90%">OpenCV</span>
             <span class="tag tag-hot" style="--skill-level: 85%;" data-percent="85%">YOLO</span>
-            <span class="tag" style="--skill-level: 85%;" data-percent="85%">Face & Object Detection</span>
-            <span class="tag" style="--skill-level: 85%;" data-percent="85%">Image Preprocessing</span>
+            <span class="tag" style="--skill-level: 85%;" data-percent="85%">HSV Segmentation</span>
+            <span class="tag" style="--skill-level: 80%;" data-percent="80%">TF2 Transforms</span>
+            <span class="tag" style="--skill-level: 75%;" data-percent="75%">Image Preprocessing</span>
           </div>
         </div>
 
-        <!-- 3. Programming -->
         <div class="skill-group glass-card">
           <div class="skill-group-icon">
             <svg class="icon-svg icon-bob" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -333,37 +307,30 @@
           </div>
           <h3>Programming</h3>
           <div class="skill-tags">
-            <span class="tag tag-hot" style="--skill-level: 95%;" data-percent="75%">Python</span>
-            <span class="tag" style="--skill-level: 85%;" data-percent="75%">C++</span>
+            <span class="tag tag-hot" style="--skill-level: 95%;" data-percent="95%">Python</span>
+            <span class="tag" style="--skill-level: 85%;" data-percent="85%">C++</span>
+            <span class="tag" style="--skill-level: 80%;" data-percent="80%">C / Embedded C</span>
             <span class="tag" style="--skill-level: 75%;" data-percent="75%">MATLAB</span>
-            <span class="tag" style="--skill-level: 80%;" data-percent="70%">Embedded C</span>
           </div>
         </div>
 
-        <!-- 4. Medical Imaging -->
         <div class="skill-group glass-card">
           <div class="skill-group-icon">
-            <svg class="icon-svg mri-svg" viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="2" y="12" width="48" height="28" rx="14" stroke-width="2.5" />
-              <circle cx="26" cy="26" r="9" stroke-width="2" />
-              <circle cx="26" cy="26" r="12.5" stroke-width="1.2" stroke-dasharray="3 3" class="mri-ring-1"
-                opacity="0.65" />
-              <line x1="4" y1="26" x2="17" y2="26" stroke-width="3" stroke-linecap="round" />
-              <line x1="35" y1="26" x2="48" y2="26" stroke-width="3" stroke-linecap="round" />
+            <svg class="icon-svg icon-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 5c-3.9 0-7 3.1-7 7 0 2.2 1 4.2 2.6 5.5L8 20h8l.4-2.5C18 16.2 19 14.2 19 12c0-3.9-3.1-7-7-7z" />
+              <path d="M9 11h6M10 14h4M12 5V3" />
             </svg>
           </div>
-          <h3>Medical Imaging &amp; AI</h3>
+          <h3>AI &amp; Deep Learning</h3>
           <div class="skill-tags">
-            <span class="tag tag-hot" style="--skill-level: 85%;" data-percent="85%">Chest X-ray Analysis</span>
-            <span class="tag" style="--skill-level: 80%;" data-percent="75%">PyTorch</span>
-            <span class="tag" style="--skill-level: 75%;" data-percent="75%">TensorFlow</span>
-            <span class="tag" style="--skill-level: 85%;" data-percent="80%">CNNs</span>
-            <span class="tag" style="--skill-level: 80%;" data-percent="75%">Transfer Learning</span>
-            <span class="tag" style="--skill-level: 85%;" data-percent="80%">Dataset Curation</span>
+            <span class="tag tag-hot" style="--skill-level: 85%;" data-percent="85%">PyTorch</span>
+            <span class="tag" style="--skill-level: 80%;" data-percent="80%">TensorFlow</span>
+            <span class="tag" style="--skill-level: 85%;" data-percent="85%">CNNs</span>
+            <span class="tag" style="--skill-level: 80%;" data-percent="80%">Transfer Learning</span>
+            <span class="tag" style="--skill-level: 75%;" data-percent="75%">YOLOv3</span>
           </div>
         </div>
 
-        <!-- 5. Embedded & IoT -->
         <div class="skill-group glass-card">
           <div class="skill-group-icon">
             <svg class="icon-svg icon-ping" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -373,31 +340,28 @@
           </div>
           <h3>Embedded &amp; IoT</h3>
           <div class="skill-tags">
-            <span class="tag" style="--skill-level: 90%;" data-percent="90%">ESP32</span>
-            <span class="tag" style="--skill-level: 85%;" data-percent="95%">Arduino</span>
-            <span class="tag" style="--skill-level: 75%;" data-percent="75%">BLE</span>
-            <span class="tag" style="--skill-level: 80%;" data-percent="80%">Raspberry Pi</span>
-            <span class="tag" style="--skill-level: 80%;" data-percent="80%">ESP-IDF</span>
-            <span class="tag" style="--skill-level: 70%;" data-percent="70%">KiCad</span>
+            <span class="tag" style="--skill-level: 90%;" data-percent="90%">ESP32 (ESP-IDF)</span>
+            <span class="tag" style="--skill-level: 85%;" data-percent="85%">STM32 / Arduino</span>
+            <span class="tag" style="--skill-level: 80%;" data-percent="80%">KiCad PCB Design</span>
+            <span class="tag" style="--skill-level: 75%;" data-percent="75%">BLE / MQTT</span>
+            <span class="tag" style="--skill-level: 70%;" data-percent="70%">RTOS / OTA</span>
           </div>
         </div>
 
-        <!-- 6. Tools -->
         <div class="skill-group glass-card">
           <div class="skill-group-icon">
             <svg class="icon-svg icon-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <circle cx="12" cy="12" r="3" />
-              <path
-                d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
+              <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
             </svg>
           </div>
           <h3>Tools &amp; DevOps</h3>
           <div class="skill-tags">
-            <span class="tag" style="--skill-level: 90%;" data-percent="90%">Linux</span>
+            <span class="tag" style="--skill-level: 90%;" data-percent="90%">Linux (Ubuntu)</span>
             <span class="tag" style="--skill-level: 90%;" data-percent="90%">Git</span>
-            <span class="tag" style="--skill-level: 80%;" data-percent="75%">Docker</span>
-            <span class="tag" style="--skill-level: 95%;" data-percent="95%">VS Code</span>
-            <span class="tag" style="--skill-level: 70%;" data-percent="70%">Simulink</span>
+            <span class="tag" style="--skill-level: 80%;" data-percent="80%">Docker</span>
+            <span class="tag" style="--skill-level: 75%;" data-percent="75%">Simulink</span>
+            <span class="tag" style="--skill-level: 70%;" data-percent="70%">Azure Cloud</span>
           </div>
         </div>
 
@@ -408,74 +372,52 @@
   <!-- ─── EDUCATION ─────────────────────────────────────────── -->
   <section id="education" class="section">
     <div class="container">
-      <!-- ── Education: Animated Gear System ── -->
       <div class="section-robot edu-gears" aria-hidden="true">
         <svg class="edu-gears-svg" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" overflow="visible">
-          <!-- Gear 1: large, 8 teeth — center (85,130) -->
+          <defs>
+            <filter id="gnode-glow" x="-70%" y="-70%" width="240%" height="240%">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
           <g class="edu-gear-1">
             <circle cx="85" cy="130" r="30" fill="none" stroke="#0ea5e9" stroke-width="2.5" opacity="0.7" />
             <circle cx="85" cy="130" r="11" fill="none" stroke="#0ea5e9" stroke-width="2" opacity="0.5" />
             <line x1="74" y1="130" x2="96" y2="130" stroke="#0ea5e9" stroke-width="1.5" opacity="0.4" />
             <line x1="85" y1="119" x2="85" y2="141" stroke="#0ea5e9" stroke-width="1.5" opacity="0.4" />
-            <rect x="79" y="80" width="12" height="20" rx="3" fill="#0ea5e9" opacity="0.55"
-              transform="rotate(0,85,130)" />
-            <rect x="79" y="80" width="12" height="20" rx="3" fill="#0ea5e9" opacity="0.55"
-              transform="rotate(45,85,130)" />
-            <rect x="79" y="80" width="12" height="20" rx="3" fill="#0ea5e9" opacity="0.55"
-              transform="rotate(90,85,130)" />
-            <rect x="79" y="80" width="12" height="20" rx="3" fill="#0ea5e9" opacity="0.55"
-              transform="rotate(135,85,130)" />
-            <rect x="79" y="80" width="12" height="20" rx="3" fill="#0ea5e9" opacity="0.55"
-              transform="rotate(180,85,130)" />
-            <rect x="79" y="80" width="12" height="20" rx="3" fill="#0ea5e9" opacity="0.55"
-              transform="rotate(225,85,130)" />
-            <rect x="79" y="80" width="12" height="20" rx="3" fill="#0ea5e9" opacity="0.55"
-              transform="rotate(270,85,130)" />
-            <rect x="79" y="80" width="12" height="20" rx="3" fill="#0ea5e9" opacity="0.55"
-              transform="rotate(315,85,130)" />
+            <rect x="79" y="80" width="12" height="20" rx="3" fill="#0ea5e9" opacity="0.55" transform="rotate(0,85,130)" />
+            <rect x="79" y="80" width="12" height="20" rx="3" fill="#0ea5e9" opacity="0.55" transform="rotate(45,85,130)" />
+            <rect x="79" y="80" width="12" height="20" rx="3" fill="#0ea5e9" opacity="0.55" transform="rotate(90,85,130)" />
+            <rect x="79" y="80" width="12" height="20" rx="3" fill="#0ea5e9" opacity="0.55" transform="rotate(135,85,130)" />
+            <rect x="79" y="80" width="12" height="20" rx="3" fill="#0ea5e9" opacity="0.55" transform="rotate(180,85,130)" />
+            <rect x="79" y="80" width="12" height="20" rx="3" fill="#0ea5e9" opacity="0.55" transform="rotate(225,85,130)" />
+            <rect x="79" y="80" width="12" height="20" rx="3" fill="#0ea5e9" opacity="0.55" transform="rotate(270,85,130)" />
+            <rect x="79" y="80" width="12" height="20" rx="3" fill="#0ea5e9" opacity="0.55" transform="rotate(315,85,130)" />
           </g>
-          <!-- Gear 2: medium, 6 teeth — center (190,72) -->
           <g class="edu-gear-2">
             <circle cx="190" cy="72" r="20" fill="none" stroke="#6366f1" stroke-width="2" opacity="0.7" />
             <circle cx="190" cy="72" r="7" fill="none" stroke="#6366f1" stroke-width="1.5" opacity="0.5" />
-            <rect x="184" y="45" width="12" height="14" rx="2.5" fill="#6366f1" opacity="0.55"
-              transform="rotate(0,190,72)" />
-            <rect x="184" y="45" width="12" height="14" rx="2.5" fill="#6366f1" opacity="0.55"
-              transform="rotate(60,190,72)" />
-            <rect x="184" y="45" width="12" height="14" rx="2.5" fill="#6366f1" opacity="0.55"
-              transform="rotate(120,190,72)" />
-            <rect x="184" y="45" width="12" height="14" rx="2.5" fill="#6366f1" opacity="0.55"
-              transform="rotate(180,190,72)" />
-            <rect x="184" y="45" width="12" height="14" rx="2.5" fill="#6366f1" opacity="0.55"
-              transform="rotate(240,190,72)" />
-            <rect x="184" y="45" width="12" height="14" rx="2.5" fill="#6366f1" opacity="0.55"
-              transform="rotate(300,190,72)" />
+            <rect x="184" y="45" width="12" height="14" rx="2.5" fill="#6366f1" opacity="0.55" transform="rotate(0,190,72)" />
+            <rect x="184" y="45" width="12" height="14" rx="2.5" fill="#6366f1" opacity="0.55" transform="rotate(60,190,72)" />
+            <rect x="184" y="45" width="12" height="14" rx="2.5" fill="#6366f1" opacity="0.55" transform="rotate(120,190,72)" />
+            <rect x="184" y="45" width="12" height="14" rx="2.5" fill="#6366f1" opacity="0.55" transform="rotate(180,190,72)" />
+            <rect x="184" y="45" width="12" height="14" rx="2.5" fill="#6366f1" opacity="0.55" transform="rotate(240,190,72)" />
+            <rect x="184" y="45" width="12" height="14" rx="2.5" fill="#6366f1" opacity="0.55" transform="rotate(300,190,72)" />
           </g>
-          <!-- Gear 3: small, 5 teeth — center (215,192) -->
           <g class="edu-gear-3">
             <circle cx="215" cy="192" r="14" fill="none" stroke="#64748b" stroke-width="1.8" opacity="0.6" />
             <circle cx="215" cy="192" r="5" fill="none" stroke="#64748b" stroke-width="1.2" opacity="0.4" />
-            <rect x="211" y="171" width="8" height="11" rx="2" fill="#64748b" opacity="0.5"
-              transform="rotate(0,215,192)" />
-            <rect x="211" y="171" width="8" height="11" rx="2" fill="#64748b" opacity="0.5"
-              transform="rotate(72,215,192)" />
-            <rect x="211" y="171" width="8" height="11" rx="2" fill="#64748b" opacity="0.5"
-              transform="rotate(144,215,192)" />
-            <rect x="211" y="171" width="8" height="11" rx="2" fill="#64748b" opacity="0.5"
-              transform="rotate(216,215,192)" />
-            <rect x="211" y="171" width="8" height="11" rx="2" fill="#64748b" opacity="0.5"
-              transform="rotate(288,215,192)" />
+            <rect x="211" y="171" width="8" height="11" rx="2" fill="#64748b" opacity="0.5" transform="rotate(0,215,192)" />
+            <rect x="211" y="171" width="8" height="11" rx="2" fill="#64748b" opacity="0.5" transform="rotate(72,215,192)" />
+            <rect x="211" y="171" width="8" height="11" rx="2" fill="#64748b" opacity="0.5" transform="rotate(144,215,192)" />
+            <rect x="211" y="171" width="8" height="11" rx="2" fill="#64748b" opacity="0.5" transform="rotate(216,215,192)" />
+            <rect x="211" y="171" width="8" height="11" rx="2" fill="#64748b" opacity="0.5" transform="rotate(288,215,192)" />
           </g>
-          <!-- Connector lines (drive shaft visual) -->
-          <line x1="85" y1="130" x2="190" y2="72" stroke="#0ea5e9" stroke-width="1" stroke-dasharray="4,4"
-            opacity="0.25" />
-          <line x1="190" y1="72" x2="215" y2="192" stroke="#6366f1" stroke-width="1" stroke-dasharray="4,4"
-            opacity="0.2" />
-          <!-- Circuit board dots -->
+          <line x1="85" y1="130" x2="190" y2="72" stroke="#0ea5e9" stroke-width="1" stroke-dasharray="4,4" opacity="0.25" />
+          <line x1="190" y1="72" x2="215" y2="192" stroke="#6366f1" stroke-width="1" stroke-dasharray="4,4" opacity="0.2" />
           <circle cx="85" cy="130" r="4" fill="#0ea5e9" opacity="0.5" />
           <circle cx="190" cy="72" r="3" fill="#6366f1" opacity="0.5" />
           <circle cx="215" cy="192" r="2.5" fill="#64748b" opacity="0.45" />
-          <!-- Decorative circuit traces -->
           <path d="M115 130 L140 130 L140 110 L190 110" fill="none" stroke="#0ea5e9" stroke-width="1" opacity="0.2" />
           <path d="M190 92  L190 130 L215 130 L215 178" fill="none" stroke="#6366f1" stroke-width="1" opacity="0.18" />
         </svg>
@@ -489,25 +431,23 @@
             <div class="timeline-period">Apr 2024 – Sep 2026</div>
             <h3>M.Sc. Autonomy Technologies</h3>
             <div class="timeline-org">Friedrich-Alexander-Universität Erlangen–Nürnberg (FAU)</div>
-            <div class="timeline-loc"><svg class="loc-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2">
-                <path d="M20 10c0 6-8 13-8 13s-8-7-8-13a8 8 0 0 1 16 0z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg> Erlangen, Germany</div>
+            <div class="timeline-loc"><svg class="loc-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 13-8 13s-8-7-8-13a8 8 0 0 1 16 0z" /><circle cx="12" cy="10" r="3" /></svg> Erlangen, Germany</div>
+            <!-- FIX 5: Updated ECTS 62.5→70 and GPA 2.7→2.6 -->
             <div class="timeline-stats">
-              <span><strong>ECTS:</strong> 62.5 / 120</span>
-              <span><strong>GPA:</strong> 2.7</span>
+              <span><strong>ECTS:</strong> 70.0 / 120</span>
+              <span><strong>GPA:</strong> 2.6</span>
             </div>
             <div class="coursework">
               <div class="coursework-label">Relevant Coursework</div>
               <div class="course-pills">
+                <span class="pill">Robotics 1</span>
                 <span class="pill">Deep Learning</span>
                 <span class="pill">Pattern Recognition</span>
-                <span class="pill">Computer Vision</span>
                 <span class="pill">ML in Signal Processing</span>
                 <span class="pill">AI in Medical Robotics</span>
-                <span class="pill">Robotics in Surgery &amp; Diagnostics</span>
                 <span class="pill">Human-Robot Co-adaptation</span>
+                <span class="pill">Intent Detection &amp; Feedback</span>
+                <span class="pill">Rehabilitation &amp; Assistive Robotics</span>
               </div>
             </div>
           </div>
@@ -517,24 +457,13 @@
           <div class="timeline-dot"></div>
           <div class="timeline-content glass-card">
             <div class="timeline-period">Aug 2018 – Jul 2022</div>
-            <h3>B.Tech Automation &amp; Robotics</h3>
+            <h3>B.E. Automation &amp; Robotics</h3>
             <div class="timeline-org">KLE Technological University</div>
-            <div class="timeline-loc"><svg class="loc-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2">
-                <path d="M20 10c0 6-8 13-8 13s-8-7-8-13a8 8 0 0 1 16 0z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg> Hubballi, India</div>
+            <div class="timeline-loc"><svg class="loc-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 13-8 13s-8-7-8-13a8 8 0 0 1 16 0z" /><circle cx="12" cy="10" r="3" /></svg> Hubballi, India</div>
             <div class="timeline-stats">
               <span><strong>GPA:</strong> 2.3</span>
             </div>
-            <p class="thesis-note"><svg class="doc-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                <polyline points="14,2 14,8 20,8" />
-                <line x1="8" y1="13" x2="16" y2="13" />
-                <line x1="8" y1="17" x2="16" y2="17" />
-              </svg> Bachelor's Thesis: <em>"Automated Grading and Sorting System using Computer
-                Vision"</em></p>
+            <p class="thesis-note"><svg class="doc-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14,2 14,8 20,8" /><line x1="8" y1="13" x2="16" y2="13" /><line x1="8" y1="17" x2="16" y2="17" /></svg> Bachelor's Thesis: <em>"Automated Grading and Sorting System using Computer Vision"</em></p>
           </div>
         </div>
       </div>
@@ -547,7 +476,6 @@
       <div class="section-label">04 / Experience</div>
       <h2 class="section-title">Work &amp; Research</h2>
 
-      <!-- High-Fidelity 3D Soldering Simulation Background -->
       <div class="section-robot experience-solder" aria-hidden="true">
         <div class="solder-arm experience-arm">
           <div class="omni-shoulder">
@@ -566,40 +494,21 @@
           </div>
         </div>
         <div class="pcb-board exp-pcb">
-          <!-- IC chips -->
           <div class="pcb-ic ic1"><span>ESP32</span></div>
           <div class="pcb-ic ic2"><span>MCU</span></div>
-          <!-- Capacitors -->
-          <div class="pcb-cap cap1"></div>
-          <div class="pcb-cap cap2"></div>
-          <div class="pcb-cap cap3"></div>
-          <!-- Resistors -->
-          <div class="pcb-res res1"></div>
-          <div class="pcb-res res2"></div>
-          <div class="pcb-res res3"></div>
-          <div class="pcb-res res4"></div>
-          <!-- LED indicator -->
+          <div class="pcb-cap cap1"></div><div class="pcb-cap cap2"></div><div class="pcb-cap cap3"></div>
+          <div class="pcb-res res1"></div><div class="pcb-res res2"></div><div class="pcb-res res3"></div><div class="pcb-res res4"></div>
           <div class="pcb-led led-active"></div>
-          <!-- Copper traces -->
-          <div class="pcb-trace tr1"></div>
-          <div class="pcb-trace tr2"></div>
-          <div class="pcb-trace tr3"></div>
-          <!-- Solder point (active joint) -->
+          <div class="pcb-trace tr1"></div><div class="pcb-trace tr2"></div><div class="pcb-trace tr3"></div>
           <div class="pcb-solder-pt"></div>
         </div>
         <div class="spark-shower">
-          <div class="spark p1"></div>
-          <div class="spark p2"></div>
-          <div class="spark p3"></div>
-          <div class="spark p4"></div>
-          <div class="spark p5"></div>
-          <div class="spark p6"></div>
-          <div class="spark p7"></div>
-          <div class="spark p8"></div>
-          <div class="spark p9"></div>
-          <div class="spark p10"></div>
+          <div class="spark p1"></div><div class="spark p2"></div><div class="spark p3"></div>
+          <div class="spark p4"></div><div class="spark p5"></div><div class="spark p6"></div>
+          <div class="spark p7"></div><div class="spark p8"></div><div class="spark p9"></div><div class="spark p10"></div>
         </div>
       </div>
+
       <div class="exp-grid">
 
         <div class="exp-card glass-card">
@@ -610,10 +519,9 @@
           <h3>Student Research Assistant</h3>
           <div class="exp-org">IDEA LABS · FAU Erlangen</div>
           <ul class="exp-bullets">
-            <li>Develop and maintain Python-based data analysis pipelines for scientific datasets</li>
-            <li>Perform data preprocessing, validation, and quality checks on structured datasets</li>
-            <li>Support debugging, reproducibility, and evaluation of machine learning workflows</li>
-            <li>Create automated evaluation scripts and structured experiment reports</li>
+            <li>Built GitHub Classroom automated grading workflow, cutting manual evaluation turnaround by <strong>50–60%</strong> across 30+ students</li>
+            <li>Wrote Python exercise-evaluation and result-parsing scripts, reducing repeat student queries by <strong>~25%</strong></li>
+            <li>Supported debugging, reproducibility, and evaluation of ML workflows on structured scientific datasets</li>
           </ul>
         </div>
 
@@ -622,16 +530,16 @@
             <div class="exp-badge exp-badge-industry">Industry</div>
             <div class="exp-period">Jan 2023 – Oct 2023</div>
           </div>
-          <h3>Internet of Things Engineer</h3>
+          <h3>IoT Engineering Intern</h3>
           <div class="exp-org">Digital Associates India · Hyderabad</div>
           <ul class="exp-bullets">
-            <li>Designed Python-based data processing pipelines for large real-world sensor datasets</li>
-            <li>Built BLE-based indoor localisation systems using ESP32 and custom PCBs</li>
-            <li>Implemented OpenCV-based computer vision pipelines for detection and validation</li>
-            <li>Built firmware via ESP-IDF for real-time sensor communication</li>
+            <li>Designed custom PCB (KiCad) and wrote ESP32 firmware (C, ESP-IDF) for BLE/RSSI indoor localisation across <strong>20–30 nodes</strong> covering a <strong>50 m</strong> area</li>
+            <li>OTA firmware pipeline reduced field deployment time by <strong>~25%</strong>; hardware validation cut PCB rework by <strong>~20%</strong></li>
+            <li>Integrated MQTT telemetry with Azure Cloud; built real-time Power BI dashboards for asset tracking</li>
           </ul>
         </div>
 
+        <!-- FIX 6: CASE internship — scoped to actual role (arm only) -->
         <div class="exp-card glass-card">
           <div class="exp-header">
             <div class="exp-badge exp-badge-intern">Internship</div>
@@ -640,9 +548,9 @@
           <h3>Systems Engineer Intern</h3>
           <div class="exp-org">Centre for Autonomous Systems Engineering · Hubballi</div>
           <ul class="exp-bullets">
-            <li>Developed robotics software using ROS2 (Python/C++) and Gazebo simulation</li>
-            <li>Designed and fabricated a 5-DOF robotic arm using SolidWorks &amp; NX-CAD</li>
-            <li>Validated kinematic models and tuned Dynamixel XM motor control architecture</li>
+            <li>Designed and fabricated a <strong>5-DOF robotic arm</strong> in SolidWorks — full mechanical CAD, 3D-printed gripper and link assemblies, Dynamixel XM430 servo motors; achieved <strong>±5 mm</strong> end-effector accuracy with <strong>5 kg</strong> payload</li>
+            <li>Derived D-H kinematic model, implemented forward/inverse kinematics, built URDF/Xacro model, validated in Gazebo, and configured MoveIt2 for collision-aware pick-and-place</li>
+            <li>Programmed Dynamixel XM430 servo controllers (Python/C++ SDK) for joint-level trajectory execution; simulation-first approach reduced physical rework by <strong>10–20%</strong></li>
           </ul>
         </div>
 
@@ -656,7 +564,7 @@
       <div class="section-label">05 / Projects</div>
       <h2 class="section-title">Featured Work</h2>
 
-      <!-- ★ FEATURED: Franka Panda (full-width hero card) -->
+      <!-- Featured Franka -->
       <div class="project-card project-featured glass-card" id="proj-franka">
         <div class="project-visual pv-franka">
           <div class="pv-franka-content">
@@ -674,62 +582,25 @@
         </div>
         <div class="project-body">
           <div class="project-badges">
-            <span class="pbadge pbadge-star"><svg style="width:12px;height:12px;vertical-align:-1px;margin-right:3px"
-                viewBox="0 0 24 24" fill="currentColor" stroke="none">
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-              </svg>Key Highlight</span>
+            <span class="pbadge pbadge-star"><svg style="width:12px;height:12px;vertical-align:-1px;margin-right:3px" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>Key Highlight</span>
             <span class="pbadge">Robotics</span>
             <span class="pbadge">Computer Vision</span>
             <span class="pbadge">Manipulation</span>
           </div>
           <h3>Franka Panda — Vision-Guided Pick &amp; Place Simulation</h3>
-          <p class="featured-desc">Full ROS2 + MoveIt2 simulation of the Franka Emika Panda 7-DOF robot arm performing
-            autonomous colour-targeted pick-and-place in Ignition Gazebo (Fortress). A custom
-            <strong>ColorDetector</strong> ROS2 node processes live camera images using HSV segmentation and TF2
-            transforms to localise Red, Green, and Blue objects in the robot's base frame. A
-            <strong>GraspManager</strong> node monitors gripper joint states and dynamically creates/removes fixed
-            joints in Gazebo to reliably attach and release objects — solving the physics engine grasping limitation.
-            The full pipeline is orchestrated via a single launch file: Gazebo → ros2_control → MoveIt2 → Vision → Grasp
-            → Pick &amp; Place.
-          </p>
+          <p class="featured-desc">Full ROS2 + MoveIt2 simulation of the Franka Emika Panda 7-DOF robot arm performing autonomous colour-targeted pick-and-place in Ignition Gazebo (Fortress). A custom <strong>ColorDetector</strong> node processes live camera images using HSV segmentation and TF2 transforms to localise objects in the robot's base frame. A <strong>GraspManager</strong> node dynamically creates/removes fixed joints in Gazebo to reliably attach and release objects — solving the physics engine grasping limitation. Achieved <strong>80–85% grasp success rate</strong> and <strong>95–100% colour detection accuracy</strong> across 3+ object classes.</p>
           <div class="featured-highlights">
             <div class="fh-item">
-              <span class="fh-icon"><svg class="icon-svg icon-pulse" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="1.5">
-                  <circle cx="12" cy="12" r="10" />
-                  <circle cx="12" cy="12" r="6" />
-                  <circle cx="12" cy="12" r="2" />
-                  <path d="M22 12h-4M6 12H2M12 2v4M12 16v4" />
-                </svg></span>
-              <div><strong>HSV Colour Detection</strong>
-                <p>Dual-range red HSV detection + TF2 camera-to-base-frame transform for precise 3D object localisation
-                </p>
-              </div>
+              <span class="fh-icon"><svg class="icon-svg icon-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /><path d="M22 12h-4M6 12H2M12 2v4M12 16v4" /></svg></span>
+              <div><strong>HSV Colour Detection</strong><p>Dual-range red HSV + TF2 camera-to-base transform for precise 3D object localisation</p></div>
             </div>
             <div class="fh-item">
-              <span class="fh-icon"><svg class="icon-svg icon-bob" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="1.5">
-                  <path d="M4 20h5l2-8 5-2 2-6" />
-                  <circle cx="18" cy="4" r="2" />
-                  <path d="M7 20c0-1.1.9-2 2-2h5a2 2 0 0 1 0 4H9a2 2 0 0 1-2-2z" />
-                </svg></span>
-              <div><strong>MoveIt2 Motion Planning</strong>
-                <p>Cartesian trajectory planning with configurable hover &amp; approach Z offsets; 10s startup delay for
-                  system readiness</p>
-              </div>
+              <span class="fh-icon"><svg class="icon-svg icon-bob" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20h5l2-8 5-2 2-6" /><circle cx="18" cy="4" r="2" /><path d="M7 20c0-1.1.9-2 2-2h5a2 2 0 0 1 0 4H9a2 2 0 0 1-2-2z" /></svg></span>
+              <div><strong>MoveIt2 Motion Planning</strong><p>Cartesian trajectory planning with collision avoidance; configurable hover &amp; approach Z offsets</p></div>
             </div>
             <div class="fh-item">
-              <span class="fh-icon"><svg class="icon-svg icon-spin" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="1.5">
-                  <circle cx="12" cy="12" r="3" />
-                  <path
-                    d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
-                </svg></span>
-              <div><strong>Grasp Manager</strong>
-                <p>Custom joint attach/detach node via Ignition service CLI — enables reliable object holding during arm
-                  motion</p>
-              </div>
+              <span class="fh-icon"><svg class="icon-svg icon-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3" /><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" /></svg></span>
+              <div><strong>Grasp Manager</strong><p>Custom joint attach/detach node via Ignition service CLI — reliable object holding during arm motion</p></div>
             </div>
           </div>
           <div class="project-tags">
@@ -745,47 +616,57 @@
         </div>
       </div>
 
-      <!-- Remaining projects grid (3-col) -->
       <div class="projects-grid">
 
-        <!-- ROBOTICS -->
+        <!-- FIX 7: AMR project — scoped to actual role -->
         <div class="project-card glass-card" id="proj-amr">
           <div class="project-visual pv-robotics">
-            <div class="pv-icon"><svg class="icon-svg icon-bob" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="1.3">
-                <path d="M4 20h5l2-8 5-2 2-6" />
-                <circle cx="18" cy="4" r="2" />
-                <path d="M7 20c0-1.1.9-2 2-2h5a2 2 0 0 1 0 4H9a2 2 0 0 1-2-2z" />
-              </svg></div>
+            <div class="pv-icon"><svg class="icon-svg icon-bob" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 20h5l2-8 5-2 2-6" /><circle cx="18" cy="4" r="2" /><path d="M7 20c0-1.1.9-2 2-2h5a2 2 0 0 1 0 4H9a2 2 0 0 1-2-2z" /></svg></div>
           </div>
           <div class="project-body">
             <div class="project-badges">
               <span class="pbadge">Robotics</span>
-              <span class="pbadge">Autonomy</span>
+              <span class="pbadge">Manipulation</span>
             </div>
-            <h3>Autonomous Mobile Robot (AMR)</h3>
-            <p>Designed and deployed an AMR with 300 kg payload capacity integrating EKF-based localisation, A*
-              navigation, and a 5-DOF robotic arm. Full ROS2 stack with Gazebo simulation, rigorous kinematic modelling
-              and motor control.</p>
+            <h3>5-DOF Robotic Arm — Design to Deployment</h3>
+            <!-- FIX: corrected description — arm role only, AMR as context -->
+            <p>Designed and fabricated a 5-DOF robotic arm (SolidWorks, Dynamixel XM430) as the manipulation module of a 300 kg warehouse AGV/AMR. Derived D-H kinematic model, configured MoveIt2 for pick-and-place, and achieved ±5 mm end-effector accuracy. Simulation-first approach reduced physical rework by 10–20%.</p>
             <div class="project-tags">
               <span class="tag-sm">ROS2</span>
-              <span class="tag-sm">Nav2</span>
-              <span class="tag-sm">EKF</span>
-              <span class="tag-sm">Gazebo</span>
+              <span class="tag-sm">MoveIt2</span>
               <span class="tag-sm">SolidWorks</span>
+              <span class="tag-sm">Dynamixel XM430</span>
+              <span class="tag-sm">Gazebo</span>
+              <span class="tag-sm">URDF/Xacro</span>
             </div>
           </div>
         </div>
 
-        <!-- COMPUTER VISION -->
-        <div class="project-card glass-card" id="proj-sort">
+        <div class="project-card glass-card" id="proj-turtlebot">
           <div class="project-visual pv-cv">
-            <div class="pv-icon"><svg class="icon-svg icon-bob" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="1.3">
-                <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z" />
-                <circle cx="12" cy="12" r="3" />
-                <circle cx="12" cy="12" r="1" fill="currentColor" />
-              </svg></div>
+            <div class="pv-icon"><svg class="icon-svg icon-bob" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 20h5l2-8 5-2 2-6" /><circle cx="18" cy="4" r="2" /><path d="M7 20c0-1.1.9-2 2-2h5a2 2 0 0 1 0 4H9a2 2 0 0 1-2-2z" /></svg></div>
+          </div>
+          <div class="project-body">
+            <div class="project-badges">
+              <span class="pbadge">Mobile Robotics</span>
+              <span class="pbadge">SLAM</span>
+            </div>
+            <h3>TurtleBot3 SLAM &amp; Autonomous Navigation</h3>
+            <p>Deployed a full ROS2 navigation stack on TurtleBot3 — LiDAR-IMU sensor fusion SLAM achieving 90–95% map coverage, Nav2 with AMCL localisation attaining 80–90% autonomous waypoint success rate, and dynamic obstacle avoidance in both Gazebo and real-world indoor environments.</p>
+            <div class="project-tags">
+              <span class="tag-sm">ROS2</span>
+              <span class="tag-sm">Nav2</span>
+              <span class="tag-sm">AMCL</span>
+              <span class="tag-sm">SLAM</span>
+              <span class="tag-sm">LiDAR</span>
+              <span class="tag-sm">IMU</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card" id="proj-sort">
+          <div class="project-visual pv-driver">
+            <div class="pv-icon"><svg class="icon-svg icon-bob" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z" /><circle cx="12" cy="12" r="3" /><circle cx="12" cy="12" r="1" fill="currentColor" /></svg></div>
           </div>
           <div class="project-body">
             <div class="project-badges">
@@ -793,59 +674,25 @@
               <span class="pbadge">Thesis</span>
             </div>
             <h3>Automated Grading &amp; Sorting System</h3>
-            <p>Bachelor's thesis project: automated quality grading and sorting using computer vision and real-time
-              image processing. Full integration of camera pipeline, classification model, and mechanical actuation.</p>
+            <p>Bachelor's thesis: real-time OpenCV image recognition pipeline for automated part sorting achieving 90% classification accuracy at 5–10 items/min. Led the CV module within a 4-person team; integrated detection output with SolidWorks-designed mechanical actuators end-to-end.</p>
             <div class="project-tags">
               <span class="tag-sm">OpenCV</span>
               <span class="tag-sm">Python</span>
+              <span class="tag-sm">SolidWorks</span>
               <span class="tag-sm">Automation</span>
             </div>
           </div>
         </div>
 
-        <div class="project-card glass-card" id="proj-driver">
-          <div class="project-visual pv-driver">
-            <div class="pv-icon"><svg class="icon-svg icon-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="1.3">
-                <circle cx="12" cy="14" r="7" />
-                <path d="M9 12h.01M15 12h.01M9.5 16.5c.8 1 2.2 1 3 0" />
-                <path d="M16 5l-2 3h3l-2 3" />
-                <path d="M8 5 6 8" />
-              </svg></div>
-          </div>
-          <div class="project-body">
-            <div class="project-badges">
-              <span class="pbadge">Safety AI</span>
-              <span class="pbadge">Vision</span>
-            </div>
-            <h3>Driver Drowsiness Detection</h3>
-            <p>Real-time driver fatigue detection using YOLO-based face and eye landmark detection. Deployed with
-              alerting system for safety-critical usage. Optimised for low-latency inference on edge hardware.</p>
-            <div class="project-tags">
-              <span class="tag-sm">YOLO</span>
-              <span class="tag-sm">OpenCV</span>
-              <span class="tag-sm">Real-time</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- MEDICAL AI -->
         <div class="project-card glass-card" id="proj-xray">
           <div class="project-visual pv-medical">
             <div class="pv-icon">
               <svg class="icon-svg mri-svg" viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="1.4">
                 <rect x="2" y="12" width="48" height="28" rx="14" stroke-width="2" />
                 <circle cx="26" cy="26" r="9" stroke-width="1.8" />
-                <circle cx="26" cy="26" r="5.5" stroke-width="0.9" opacity="0.5" />
-                <circle cx="26" cy="26" r="12.5" stroke-width="1" stroke-dasharray="3 3" class="mri-ring-1"
-                  opacity="0.6" />
-                <circle cx="26" cy="26" r="16" stroke-width="0.8" stroke-dasharray="2 4" class="mri-ring-2"
-                  opacity="0.35" />
+                <circle cx="26" cy="26" r="12.5" stroke-width="1" stroke-dasharray="3 3" class="mri-ring-1" opacity="0.6" />
                 <line x1="4" y1="26" x2="17" y2="26" stroke-width="2.5" stroke-linecap="round" />
                 <line x1="35" y1="26" x2="48" y2="26" stroke-width="2.5" stroke-linecap="round" />
-                <line x1="26" y1="18" x2="26" y2="34" stroke-width="1" opacity="0.45" class="mri-scan-beam" />
-                <circle cx="8" cy="19" r="1.5" fill="currentColor" opacity="0.5" />
-                <circle cx="44" cy="19" r="1.5" fill="currentColor" opacity="0.5" />
               </svg>
             </div>
           </div>
@@ -855,53 +702,19 @@
               <span class="pbadge">Deep Learning</span>
             </div>
             <h3>Lung Disease Detection from Chest X-rays</h3>
-            <p>CNN-based models for pneumonia and tuberculosis classification using public chest X-ray datasets.
-              Implemented transfer learning and data augmentation for low-data settings, with comprehensive
-              preprocessing pipelines and cross-cohort generalisation evaluation.</p>
+            <p>CNN-based classifiers (ResNet, VGG) with transfer learning on 5,000 chest X-ray images, achieving 85% diagnostic accuracy across pneumonia and COVID-19 classes. Applied data augmentation, class-balancing, and evaluated generalisation using F1 score and AUC on held-out test data.</p>
             <div class="project-tags">
               <span class="tag-sm">PyTorch</span>
+              <span class="tag-sm">TensorFlow</span>
               <span class="tag-sm">CNNs</span>
               <span class="tag-sm">Transfer Learning</span>
-              <span class="tag-sm">OpenCV</span>
             </div>
           </div>
         </div>
 
-        <div class="project-card glass-card" id="proj-dl-classify">
-          <div class="project-visual pv-dl">
-            <div class="pv-icon"><svg class="icon-svg icon-bob" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="1.3">
-                <path d="M5 3c.5 5 3.5 7 7 9s6.5 4 7 9M5 21c.5-5 3.5-7 7-9s6.5-4 7-9" />
-                <path d="M5 9h14M5 15h14" />
-              </svg></div>
-          </div>
-          <div class="project-body">
-            <div class="project-badges">
-              <span class="pbadge">Medical AI</span>
-              <span class="pbadge">ML Pipeline</span>
-            </div>
-            <h3>Medical Image Classification Pipeline</h3>
-            <p>End-to-end supervised learning pipeline for medical imaging: dataset curation, quality checks, bias
-              analysis, model training, failure-case analysis, and identification of common pitfalls in clinical imaging
-              data.</p>
-            <div class="project-tags">
-              <span class="tag-sm">PyTorch</span>
-              <span class="tag-sm">Data Curation</span>
-              <span class="tag-sm">Bias Analysis</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- IoT -->
         <div class="project-card glass-card" id="proj-iot">
           <div class="project-visual pv-iot">
-            <div class="pv-icon"><svg class="icon-svg icon-ping" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="1.3">
-                <path d="M5 12.55a11 11 0 0 1 14.08 0" />
-                <path d="M1.42 9a16 16 0 0 1 21.16 0" />
-                <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
-                <circle cx="12" cy="20" r="1.5" fill="currentColor" />
-              </svg></div>
+            <div class="pv-icon"><svg class="icon-svg icon-ping" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M5 12.55a11 11 0 0 1 14.08 0" /><path d="M1.42 9a16 16 0 0 1 21.16 0" /><path d="M8.53 16.11a6 6 0 0 1 6.95 0" /><circle cx="12" cy="20" r="1.5" fill="currentColor" /></svg></div>
           </div>
           <div class="project-body">
             <div class="project-badges">
@@ -909,14 +722,33 @@
               <span class="pbadge">Embedded</span>
             </div>
             <h3>BLE Indoor Localisation System</h3>
-            <p>BLE-based indoor localisation using ESP32 microcontrollers and custom PCBs (KiCad/Eagle), with real-time
-              dashboards for environmental sensor data (temperature, humidity, fire). Built on ESP-IDF firmware in
-              C/Python.</p>
+            <p>Custom PCB (KiCad) + ESP32 firmware (ESP-IDF) for BLE/RSSI trilateration across 20–30 sensor nodes covering a 50 m indoor area. OTA pipeline reduced deployment time ~25%. MQTT → Azure → Power BI telemetry stack for real-time asset tracking and geofence monitoring.</p>
             <div class="project-tags">
               <span class="tag-sm">ESP32</span>
-              <span class="tag-sm">BLE</span>
+              <span class="tag-sm">BLE / RSSI</span>
               <span class="tag-sm">KiCad</span>
               <span class="tag-sm">ESP-IDF</span>
+              <span class="tag-sm">MQTT</span>
+              <span class="tag-sm">Azure</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card" id="proj-dl-classify">
+          <div class="project-visual pv-dl">
+            <div class="pv-icon"><svg class="icon-svg icon-bob" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M5 3c.5 5 3.5 7 7 9s6.5 4 7 9M5 21c.5-5 3.5-7 7-9s6.5-4 7-9" /><path d="M5 9h14M5 15h14" /></svg></div>
+          </div>
+          <div class="project-body">
+            <div class="project-badges">
+              <span class="pbadge">Medical AI</span>
+              <span class="pbadge">ML Pipeline</span>
+            </div>
+            <h3>Medical Image Classification Pipeline</h3>
+            <p>End-to-end supervised learning pipeline for medical imaging: dataset curation, quality checks, bias analysis, model training, and failure-case analysis. Identified common pitfalls in clinical imaging data and implemented robust preprocessing and augmentation strategies.</p>
+            <div class="project-tags">
+              <span class="tag-sm">PyTorch</span>
+              <span class="tag-sm">Data Curation</span>
+              <span class="tag-sm">Bias Analysis</span>
             </div>
           </div>
         </div>
@@ -932,71 +764,42 @@
       <h2 class="section-title">Let's Connect</h2>
       <div class="contact-wrap">
         <div class="contact-info glass-card">
-          <p class="contact-lead">I'm actively seeking a <strong>Master's Thesis</strong> and <strong>Team
-              Project</strong> in medical image computing, low-data learning, or clinical AI. Open to hospital-based and
-            academic research environments.</p>
+          <!-- FIX 8: Contact lead — robotics-focused, correct target roles -->
+          <p class="contact-lead">I'm actively seeking a <strong>Master's thesis placement</strong>, <strong>Pflichtpraktikum (10+ weeks)</strong>, or <strong>Werkstudent role</strong> in robotics, autonomous systems, or embedded engineering — at research labs, Fraunhofer institutes, or industrial teams across Germany and Europe. Immediate availability. On-site or hybrid.</p>
           <div class="contact-links">
-            <a href="mailto:ganeshsreddy1@gmail.com" class="contact-link" id="contact-email">
-              <div class="clink-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="2">
-                  <rect x="2" y="4" width="20" height="16" rx="2" />
-                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                </svg></div>
-              <div>
-                <div class="clink-label">Email</div>
-                <div class="clink-val">ganeshsreddy1@gmail.com</div>
-              </div>
+            <a href="mailto:ganeshreddy30102000@gmail.com" class="contact-link" id="contact-email">
+              <div class="clink-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg></div>
+              <div><div class="clink-label">Email</div><div class="clink-val">ganeshreddy30102000@gmail.com</div></div>
             </a>
             <a href="tel:+4915510182395" class="contact-link" id="contact-phone">
-              <div class="clink-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="2">
-                  <path
-                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.12 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
-                </svg></div>
-              <div>
-                <div class="clink-label">Phone</div>
-                <div class="clink-val">+49 1551 018 2395</div>
-              </div>
+              <div class="clink-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.12 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" /></svg></div>
+              <div><div class="clink-label">Phone</div><div class="clink-val">+49 1551 018 2395</div></div>
             </a>
-            <a href="https://www.linkedin.com/in/ganeshssreddy09" target="_blank" class="contact-link"
-              id="contact-linkedin">
+            <a href="https://www.linkedin.com/in/ganeshssreddy09" target="_blank" class="contact-link" id="contact-linkedin">
               <div class="clink-icon">in</div>
-              <div>
-                <div class="clink-label">LinkedIn</div>
-                <div class="clink-val">ganeshssreddy09</div>
-              </div>
+              <div><div class="clink-label">LinkedIn</div><div class="clink-val">ganeshssreddy09</div></div>
             </a>
             <a href="https://github.com/gsr07" target="_blank" class="contact-link" id="contact-github">
-              <div class="clink-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor" stroke="none">
-                  <path
-                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-                </svg></div>
-              <div>
-                <div class="clink-label">GitHub</div>
-                <div class="clink-val">gsr07</div>
-              </div>
+              <div class="clink-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" /></svg></div>
+              <div><div class="clink-label">GitHub</div><div class="clink-val">gsr07</div></div>
             </a>
           </div>
+          <!-- FIX 9: Languages — German now shows certified status -->
           <div class="languages">
             <span class="lang-pill"><span class="lang-flag lang-flag-en">EN</span> English (C1)</span>
-            <span class="lang-pill"><span class="lang-flag lang-flag-de">DE</span> German (A2)</span>
+            <span class="lang-pill"><span class="lang-flag lang-flag-de">DE</span> German (A2 Certified)</span>
             <span class="lang-pill"><span class="lang-flag lang-flag-hi">HI</span> Hindi (Native)</span>
           </div>
         </div>
         <div class="contact-cta">
-          <a href="cv/cv/Ganesh_Reddy_CV_Autonomy_technologies.pdf" target="_blank" class="btn-primary btn-large"
-            id="cta-cv-btn">
+          <a href="cv/cv/Ganesh_Reddy_CV_Autonomy_technologies.pdf" target="_blank" class="btn-primary btn-large" id="cta-cv-btn">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M12 15V3m0 12-4-4m4 4 4-4" />
               <path d="M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17" />
             </svg>
             Download Full CV
           </a>
-          <p class="cta-note"><svg class="pin-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2">
-              <path d="M20 10c0 6-8 13-8 13s-8-7-8-13a8 8 0 0 1 16 0z" />
-              <circle cx="12" cy="10" r="3" />
-            </svg> Based in Erlangen, Germany · Open to remote &amp; on-site research</p>
+          <p class="cta-note"><svg class="pin-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 13-8 13s-8-7-8-13a8 8 0 0 1 16 0z" /><circle cx="12" cy="10" r="3" /></svg> Based in Erlangen, Germany · Open to remote &amp; on-site</p>
         </div>
       </div>
     </div>
